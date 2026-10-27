@@ -1,0 +1,51 @@
+{
+  "mode": "field_test",
+  "build": "Steam 25131233 / Layton Lake District / 单人现场测试",
+  "sha256": "89dbab025114090c91a63ae7f0533ee84eee3c48f4b8543224b359c31b794c22",
+  "core_verified": true,
+  "verified": false,
+  "identity_validation": {
+    "verified": true,
+    "date": "2026-10-21",
+    "joint_unique_match_observed": true,
+    "notes": "同哈希有限只读研究：体重+0x19C、评分+0x1A0、外观种子+0x1B0。两轮分别40和39只已加载动物，三字段共同唯一匹配指定莱顿种群存档记录；包含雌雄两类。仅验证三字段及关联，不等于性别实时内存位置已定位，不代表毛色/难度已目视验证。性别直接编码与位域在+0x180..+0x1BF均未确定。连续关联功能仍由DETAILS_JOIN_ENABLED=False关闭。见details_candidate_validation.json。"
+  },
+  "health_validation": {
+    "verified": true,
+    "date": "2026-10-21",
+    "living_observed": true,
+    "corpse_observed": true,
+    "corpse_removed_observed": true,
+    "notes": "用户确认西南偏南约25米山地驯鹿尸体，领取前3帧唯一近处零生命值候选，领取且尸体消失后同临时token在3帧中均不再出现。随后用户截图报告正南160～210米活体驼鹿、健康75～100%；三帧唯一同方位相近距离驼鹿候选均为当前值=最大值4737.640625，比例100%在HUD区间内。仅当前构建现场初测；受伤中间比例未独立目视核对，性别/毛色/难度未解析。见animal_details_observations.json。"
+  },
+  "heading_validation": {
+    "verified": true,
+    "date": "2026-10-21",
+    "north_observed": true,
+    "east_observed": true,
+    "stationary_turn_observed": true,
+    "notes": "梅德韦原地平视正北/正东各3帧，候选方向357.607°/87.803°；位置仅相差约0.10世界单位，方向变化约90.20°。64字节矩阵通过齐次、正交、单位基和手性检查。仅摄像机视角，不代表人物身体；未核对极端俯仰/全部保护区。见heading_calibration_medved.json。"
+  },
+  "validation": {
+    "date": "2026-10-21",
+    "player_observed": true,
+    "species_observed": true,
+    "position_observed": true,
+    "axes_observed": true,
+    "health_observed": false,
+    "notes": "摄像机东行+X、北行-Z且停点稳定；用户先报南侧约100米白尾鹿，与随后样本相符。连续窗口中主动切换罗斯福马鹿并确认位置和距离一致；确认无黑尾鹿时空列表、暂停恢复可用。仅核心结构现场测试，非正式兼容发布；有目标的黑尾鹿导航、死亡语义、地图切换和长期稳定性未验收。详见PROOF_OF_CONCEPT.md。"
+  },
+  "offsets": {
+    "animals": 40486008,
+    "camera": 41841396,
+    "camera_world": 41841348,
+    "manager_vector": 712,
+    "species": 40,
+    "position": 328,
+    "ragdoll": 192,
+    "hpmax": 376,
+    "hp": 380,
+    "identity_weight": 412,
+    "identity_seed": 432
+  }
+}

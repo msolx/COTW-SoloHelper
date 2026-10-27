@@ -1,0 +1,15 @@
+{
+  "build": "Steam Build ID 25131233；2026-10-21本机离线观测，版本资源为空",
+  "steam_build_id": "25131233",
+  "sha256": "89dbab025114090c91a63ae7f0533ee84eee3c48f4b8543224b359c31b794c22",
+  "verified": false,
+  "validation": {},
+  "offsets": {},
+  "evidence": {
+    "camera_movement": "东行主要+X，北行主要-Z，起终点稳定；米制比例仅近似",
+    "whitetail_observation": "用户事先目视报告南侧约100米，随后3帧均读取到3个南侧白尾鹿候选，距离50至150米",
+    "blacktail_observation": "已读取资源名，尚未目视核对",
+    "report": "PROOF_OF_CONCEPT.md"
+  },
+  "notes": "正常审批只读成功；白尾鹿物种/区域与用户观察初步相符。唯一身份、死亡状态、场景切换和长期稳定性未完成核验；正式配置保持禁用"
+}

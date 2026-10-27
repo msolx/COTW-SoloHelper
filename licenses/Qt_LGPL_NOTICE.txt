@@ -1,0 +1,8 @@
+This application uses PySide6 / Qt libraries licensed under the GNU Lesser General Public License (LGPL) version 3.
+
+You may obtain the complete machine-readable copy of the source code for Qt / PySide6 at:
+https://code.qt.io/cgit/
+https://wiki.qt.io/Qt_for_Python
+
+Qt and PySide6 are copyright (C) The Qt Company Ltd. and other contributors.
+These components are provided without any warranties; see the LGPL v3 license terms for details.

@@ -1,0 +1,16 @@
+{
+  "build": "公开研究声称 2026-09-16；未实机验证",
+  "sha256": "",
+  "verified": false,
+  "validation": {},
+  "offsets": {
+    "animals": 40486008,
+    "camera": 41841396,
+    "manager_vector": 712,
+    "species": 40,
+    "position": 328,
+    "ragdoll": 192,
+    "hpmax": 376,
+    "hp": 380
+  }
+}

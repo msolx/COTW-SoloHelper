@@ -1,0 +1,2677 @@
+{
+  "schema_version": 1,
+  "source": "https://github.com/Pure-Winter-hue/apc-pw/blob/8f297b5a9d36cfa826a18977dc4bd8c129bfc6ce/apc/config/animal_details.json",
+  "source_commit": "8f297b5a9d36cfa826a18977dc4bd8c129bfc6ce",
+  "reviewed_on": "2026-10-24",
+  "license": "MIT; see licenses/apc-pw-MIT.txt",
+  "status": "community_threshold_predictions_not_game_verified",
+  "species": {
+    "american_alligator": {
+      "bands": {
+        "bronze": {
+          "min": 150,
+          "max": 225.999
+        },
+        "silver": {
+          "min": 226,
+          "max": 377.999
+        },
+        "gold": {
+          "min": 378,
+          "max": 491.999
+        },
+        "diamond": {
+          "min": 492,
+          "max": 530
+        }
+      },
+      "great_one_supported": false
+    },
+    "american_mink": {
+      "bands": {
+        "bronze": {
+          "min": 70,
+          "max": 87.999
+        },
+        "silver": {
+          "min": 88,
+          "max": 123.999
+        },
+        "gold": {
+          "min": 124,
+          "max": 150.999
+        },
+        "diamond": {
+          "min": 151,
+          "max": 160
+        }
+      },
+      "great_one_supported": false
+    },
+    "antelope_jackrabbit": {
+      "bands": {
+        "bronze": {
+          "min": 1.9,
+          "max": 2.885
+        },
+        "silver": {
+          "min": 2.886,
+          "max": 4.857
+        },
+        "gold": {
+          "min": 4.858,
+          "max": 6.336
+        },
+        "diamond": {
+          "min": 6.337,
+          "max": 6.83
+        }
+      },
+      "great_one_supported": false
+    },
+    "axis_deer": {
+      "bands": {
+        "bronze": {
+          "min": 31.565,
+          "max": 72.838
+        },
+        "silver": {
+          "min": 72.839,
+          "max": 155.387
+        },
+        "gold": {
+          "min": 155.388,
+          "max": 217.299
+        },
+        "diamond": {
+          "min": 217.3,
+          "max": 237.937
+        }
+      },
+      "great_one_supported": false
+    },
+    "banteng": {
+      "bands": {
+        "bronze": {
+          "min": 53.139,
+          "max": 71.774
+        },
+        "silver": {
+          "min": 71.775,
+          "max": 109.047
+        },
+        "gold": {
+          "min": 109.048,
+          "max": 137.001
+        },
+        "diamond": {
+          "min": 137.002,
+          "max": 146.32
+        }
+      },
+      "great_one_supported": false
+    },
+    "barasingha": {
+      "bands": {
+        "bronze": {
+          "min": 58.691,
+          "max": 95.882
+        },
+        "silver": {
+          "min": 95.883,
+          "max": 170.265
+        },
+        "gold": {
+          "min": 170.266,
+          "max": 226.052
+        },
+        "diamond": {
+          "min": 226.053,
+          "max": 244.649
+        }
+      },
+      "great_one_supported": false
+    },
+    "beceite_ibex": {
+      "bands": {
+        "bronze": {
+          "min": 45.55,
+          "max": 78.012
+        },
+        "silver": {
+          "min": 78.013,
+          "max": 142.937
+        },
+        "gold": {
+          "min": 142.938,
+          "max": 191.632
+        },
+        "diamond": {
+          "min": 191.633,
+          "max": 207.864
+        }
+      },
+      "great_one_supported": false
+    },
+    "bengal_tiger": {
+      "bands": {
+        "bronze": {
+          "min": 30,
+          "max": 35.999
+        },
+        "silver": {
+          "min": 36,
+          "max": 47.999
+        },
+        "gold": {
+          "min": 48,
+          "max": 56.999
+        },
+        "diamond": {
+          "min": 57,
+          "max": 60
+        }
+      },
+      "great_one_supported": false
+    },
+    "bighorn_sheep": {
+      "bands": {
+        "bronze": {
+          "min": 52.462,
+          "max": 84.578
+        },
+        "silver": {
+          "min": 84.579,
+          "max": 148.813
+        },
+        "gold": {
+          "min": 148.814,
+          "max": 196.989
+        },
+        "diamond": {
+          "min": 196.99,
+          "max": 213.049
+        }
+      },
+      "great_one_supported": false
+    },
+    "black_bear": {
+      "bands": {
+        "bronze": {
+          "min": 12,
+          "max": 14.399
+        },
+        "silver": {
+          "min": 14.4,
+          "max": 19.199
+        },
+        "gold": {
+          "min": 19.2,
+          "max": 22.799
+        },
+        "diamond": {
+          "min": 22.8,
+          "max": 24
+        }
+      },
+      "great_one_supported": true
+    },
+    "black_caiman": {
+      "bands": {
+        "bronze": {
+          "min": 180,
+          "max": 243.999
+        },
+        "silver": {
+          "min": 244,
+          "max": 371.999
+        },
+        "gold": {
+          "min": 372,
+          "max": 467.999
+        },
+        "diamond": {
+          "min": 468,
+          "max": 500
+        }
+      },
+      "great_one_supported": false
+    },
+    "black_grouse": {
+      "bands": {
+        "bronze": {
+          "min": 75,
+          "max": 84.999
+        },
+        "silver": {
+          "min": 85,
+          "max": 104.999
+        },
+        "gold": {
+          "min": 105,
+          "max": 119.999
+        },
+        "diamond": {
+          "min": 120,
+          "max": 125
+        }
+      },
+      "great_one_supported": false
+    },
+    "blackbuck": {
+      "bands": {
+        "bronze": {
+          "min": 54.534,
+          "max": 71.806
+        },
+        "silver": {
+          "min": 71.807,
+          "max": 106.351
+        },
+        "gold": {
+          "min": 106.352,
+          "max": 132.26
+        },
+        "diamond": {
+          "min": 132.261,
+          "max": 140.897
+        }
+      },
+      "great_one_supported": false
+    },
+    "blacktail_deer": {
+      "bands": {
+        "bronze": {
+          "min": 48.172,
+          "max": 76.929
+        },
+        "silver": {
+          "min": 76.93,
+          "max": 134.444
+        },
+        "gold": {
+          "min": 134.445,
+          "max": 177.581
+        },
+        "diamond": {
+          "min": 177.582,
+          "max": 191.961
+        }
+      },
+      "great_one_supported": false
+    },
+    "blue_sheep": {
+      "bands": {
+        "bronze": {
+          "min": 42.599,
+          "max": 67.373
+        },
+        "silver": {
+          "min": 67.374,
+          "max": 116.924
+        },
+        "gold": {
+          "min": 116.925,
+          "max": 154.086
+        },
+        "diamond": {
+          "min": 154.087,
+          "max": 166.475
+        }
+      },
+      "great_one_supported": false
+    },
+    "blue_wildebeest": {
+      "bands": {
+        "bronze": {
+          "min": 17,
+          "max": 21.599
+        },
+        "silver": {
+          "min": 21.6,
+          "max": 30.799
+        },
+        "gold": {
+          "min": 30.8,
+          "max": 37.699
+        },
+        "diamond": {
+          "min": 37.7,
+          "max": 40
+        }
+      },
+      "great_one_supported": false
+    },
+    "bobcat": {
+      "bands": {
+        "bronze": {
+          "min": 15.99,
+          "max": 18.587
+        },
+        "silver": {
+          "min": 18.588,
+          "max": 23.783
+        },
+        "gold": {
+          "min": 23.784,
+          "max": 27.68
+        },
+        "diamond": {
+          "min": 27.681,
+          "max": 28.98
+        }
+      },
+      "great_one_supported": false
+    },
+    "canada_goose": {
+      "bands": {
+        "bronze": {
+          "min": 3.2,
+          "max": 4.399
+        },
+        "silver": {
+          "min": 4.4,
+          "max": 6.799
+        },
+        "gold": {
+          "min": 6.8,
+          "max": 8.599
+        },
+        "diamond": {
+          "min": 8.6,
+          "max": 9.2
+        }
+      },
+      "great_one_supported": false
+    },
+    "cape_buffalo": {
+      "bands": {
+        "bronze": {
+          "min": 51,
+          "max": 73.299
+        },
+        "silver": {
+          "min": 73.3,
+          "max": 117.899
+        },
+        "gold": {
+          "min": 117.9,
+          "max": 151.349
+        },
+        "diamond": {
+          "min": 151.35,
+          "max": 162.5
+        }
+      },
+      "great_one_supported": false
+    },
+    "capybara": {
+      "bands": {
+        "bronze": {
+          "min": 35,
+          "max": 41.999
+        },
+        "silver": {
+          "min": 42,
+          "max": 55.999
+        },
+        "gold": {
+          "min": 56,
+          "max": 66.499
+        },
+        "diamond": {
+          "min": 66.5,
+          "max": 70
+        }
+      },
+      "great_one_supported": false
+    },
+    "caribou": {
+      "bands": {
+        "bronze": {
+          "min": 73.194,
+          "max": 152.535
+        },
+        "silver": {
+          "min": 152.536,
+          "max": 311.218
+        },
+        "gold": {
+          "min": 311.219,
+          "max": 430.231
+        },
+        "diamond": {
+          "min": 430.232,
+          "max": 469.903
+        }
+      },
+      "great_one_supported": false
+    },
+    "chamois": {
+      "bands": {
+        "bronze": {
+          "min": 23.083,
+          "max": 30.843
+        },
+        "silver": {
+          "min": 30.844,
+          "max": 46.366
+        },
+        "gold": {
+          "min": 46.367,
+          "max": 58.008
+        },
+        "diamond": {
+          "min": 58.009,
+          "max": 61.89
+        }
+      },
+      "great_one_supported": false
+    },
+    "cinnamon_teal": {
+      "bands": {
+        "bronze": {
+          "min": 3,
+          "max": 3.359
+        },
+        "silver": {
+          "min": 3.36,
+          "max": 4.079
+        },
+        "gold": {
+          "min": 4.08,
+          "max": 4.619
+        },
+        "diamond": {
+          "min": 4.62,
+          "max": 4.8
+        }
+      },
+      "great_one_supported": false
+    },
+    "collared_peccary": {
+      "bands": {
+        "bronze": {
+          "min": 7,
+          "max": 37.499
+        },
+        "silver": {
+          "min": 37.5,
+          "max": 98.499
+        },
+        "gold": {
+          "min": 98.5,
+          "max": 144.249
+        },
+        "diamond": {
+          "min": 144.25,
+          "max": 159.5
+        }
+      },
+      "great_one_supported": false
+    },
+    "coyote": {
+      "bands": {
+        "bronze": {
+          "min": 33.069,
+          "max": 38.359
+        },
+        "silver": {
+          "min": 38.36,
+          "max": 48.942
+        },
+        "gold": {
+          "min": 48.943,
+          "max": 56.878
+        },
+        "diamond": {
+          "min": 56.879,
+          "max": 59.525
+        }
+      },
+      "great_one_supported": false
+    },
+    "desert_bighorn_sheep": {
+      "bands": {
+        "bronze": {
+          "min": 52.462,
+          "max": 84.578
+        },
+        "silver": {
+          "min": 84.579,
+          "max": 148.813
+        },
+        "gold": {
+          "min": 148.814,
+          "max": 196.989
+        },
+        "diamond": {
+          "min": 196.99,
+          "max": 213.049
+        }
+      },
+      "great_one_supported": false
+    },
+    "dusky_grouse": {
+      "bands": {
+        "bronze": {
+          "min": 70,
+          "max": 87.999
+        },
+        "silver": {
+          "min": 88,
+          "max": 123.999
+        },
+        "gold": {
+          "min": 124,
+          "max": 150.999
+        },
+        "diamond": {
+          "min": 151,
+          "max": 160
+        }
+      },
+      "great_one_supported": false
+    },
+    "eastern_cottontail_rabbit": {
+      "bands": {
+        "bronze": {
+          "min": 0.8,
+          "max": 1.059
+        },
+        "silver": {
+          "min": 1.06,
+          "max": 1.579
+        },
+        "gold": {
+          "min": 1.58,
+          "max": 1.969
+        },
+        "diamond": {
+          "min": 1.97,
+          "max": 2.1
+        }
+      },
+      "great_one_supported": false
+    },
+    "eastern_grey_kangaroo": {
+      "bands": {
+        "bronze": {
+          "min": 150,
+          "max": 225.999
+        },
+        "silver": {
+          "min": 226,
+          "max": 377.999
+        },
+        "gold": {
+          "min": 378,
+          "max": 491.999
+        },
+        "diamond": {
+          "min": 492,
+          "max": 530
+        }
+      },
+      "great_one_supported": false
+    },
+    "eastern_wild_turkey": {
+      "bands": {
+        "bronze": {
+          "min": 3,
+          "max": 3.359
+        },
+        "silver": {
+          "min": 3.36,
+          "max": 4.079
+        },
+        "gold": {
+          "min": 4.08,
+          "max": 4.619
+        },
+        "diamond": {
+          "min": 4.62,
+          "max": 4.8
+        }
+      },
+      "great_one_supported": false
+    },
+    "eu_bison": {
+      "bands": {
+        "bronze": {
+          "min": 74.791,
+          "max": 86.532
+        },
+        "silver": {
+          "min": 86.533,
+          "max": 110.015
+        },
+        "gold": {
+          "min": 110.016,
+          "max": 127.627
+        },
+        "diamond": {
+          "min": 127.628,
+          "max": 133.499
+        }
+      },
+      "great_one_supported": false
+    },
+    "eu_hare": {
+      "bands": {
+        "bronze": {
+          "min": 2,
+          "max": 2.999
+        },
+        "silver": {
+          "min": 3,
+          "max": 4.999
+        },
+        "gold": {
+          "min": 5,
+          "max": 6.499
+        },
+        "diamond": {
+          "min": 6.5,
+          "max": 7
+        }
+      },
+      "great_one_supported": false
+    },
+    "eu_rabbit": {
+      "bands": {
+        "bronze": {
+          "min": 0.9,
+          "max": 1.239
+        },
+        "silver": {
+          "min": 1.24,
+          "max": 1.919
+        },
+        "gold": {
+          "min": 1.92,
+          "max": 2.429
+        },
+        "diamond": {
+          "min": 2.43,
+          "max": 2.6
+        }
+      },
+      "great_one_supported": false
+    },
+    "eurasian_brown_bear": {
+      "bands": {
+        "bronze": {
+          "min": 16,
+          "max": 18.599
+        },
+        "silver": {
+          "min": 18.6,
+          "max": 23.799
+        },
+        "gold": {
+          "min": 23.8,
+          "max": 27.699
+        },
+        "diamond": {
+          "min": 27.7,
+          "max": 29
+        }
+      },
+      "great_one_supported": false
+    },
+    "eurasian_lynx": {
+      "bands": {
+        "bronze": {
+          "min": 15.99,
+          "max": 18.587
+        },
+        "silver": {
+          "min": 18.588,
+          "max": 23.783
+        },
+        "gold": {
+          "min": 23.784,
+          "max": 27.68
+        },
+        "diamond": {
+          "min": 27.681,
+          "max": 28.98
+        }
+      },
+      "great_one_supported": false
+    },
+    "eurasian_pine_marten": {
+      "bands": {
+        "bronze": {
+          "min": 100,
+          "max": 123.999
+        },
+        "silver": {
+          "min": 124,
+          "max": 171.999
+        },
+        "gold": {
+          "min": 172,
+          "max": 207.999
+        },
+        "diamond": {
+          "min": 208,
+          "max": 220
+        }
+      },
+      "great_one_supported": false
+    },
+    "eurasian_teal": {
+      "bands": {
+        "bronze": {
+          "min": 300,
+          "max": 311.999
+        },
+        "silver": {
+          "min": 312,
+          "max": 335.999
+        },
+        "gold": {
+          "min": 336,
+          "max": 353.999
+        },
+        "diamond": {
+          "min": 354,
+          "max": 360
+        }
+      },
+      "great_one_supported": false
+    },
+    "eurasian_wigeon": {
+      "bands": {
+        "bronze": {
+          "min": 500,
+          "max": 589.999
+        },
+        "silver": {
+          "min": 590,
+          "max": 769.999
+        },
+        "gold": {
+          "min": 770,
+          "max": 904.999
+        },
+        "diamond": {
+          "min": 905,
+          "max": 950
+        }
+      },
+      "great_one_supported": false
+    },
+    "eurasian_woodcock": {
+      "bands": {
+        "bronze": {
+          "min": 21.5,
+          "max": 25.839
+        },
+        "silver": {
+          "min": 25.84,
+          "max": 34.519
+        },
+        "gold": {
+          "min": 34.52,
+          "max": 41.029
+        },
+        "diamond": {
+          "min": 41.03,
+          "max": 43.2
+        }
+      },
+      "great_one_supported": false
+    },
+    "european_badger": {
+      "bands": {
+        "bronze": {
+          "min": 7,
+          "max": 8.999
+        },
+        "silver": {
+          "min": 9,
+          "max": 12.999
+        },
+        "gold": {
+          "min": 13,
+          "max": 15.999
+        },
+        "diamond": {
+          "min": 16,
+          "max": 17
+        }
+      },
+      "great_one_supported": false
+    },
+    "fallow_deer": {
+      "bands": {
+        "bronze": {
+          "min": 63.435,
+          "max": 104.893
+        },
+        "silver": {
+          "min": 104.894,
+          "max": 187.81
+        },
+        "gold": {
+          "min": 187.811,
+          "max": 249.998
+        },
+        "diamond": {
+          "min": 249.999,
+          "max": 270.728
+        }
+      },
+      "great_one_supported": true
+    },
+    "feral_goat": {
+      "bands": {
+        "bronze": {
+          "min": 55.369,
+          "max": 89.446
+        },
+        "silver": {
+          "min": 89.447,
+          "max": 157.601
+        },
+        "gold": {
+          "min": 157.602,
+          "max": 208.718
+        },
+        "diamond": {
+          "min": 208.719,
+          "max": 225.758
+        }
+      },
+      "great_one_supported": false
+    },
+    "feral_pig": {
+      "bands": {
+        "bronze": {
+          "min": 7,
+          "max": 37.499
+        },
+        "silver": {
+          "min": 37.5,
+          "max": 98.499
+        },
+        "gold": {
+          "min": 98.5,
+          "max": 144.249
+        },
+        "diamond": {
+          "min": 144.25,
+          "max": 159.5
+        }
+      },
+      "great_one_supported": false
+    },
+    "ferruginous_duck": {
+      "bands": {
+        "bronze": {
+          "min": 600,
+          "max": 699.999
+        },
+        "silver": {
+          "min": 700,
+          "max": 899.999
+        },
+        "gold": {
+          "min": 900,
+          "max": 1049.999
+        },
+        "diamond": {
+          "min": 1050,
+          "max": 1100
+        }
+      },
+      "great_one_supported": false
+    },
+    "gadwall": {
+      "bands": {
+        "bronze": {
+          "min": 600,
+          "max": 699.999
+        },
+        "silver": {
+          "min": 700,
+          "max": 899.999
+        },
+        "gold": {
+          "min": 900,
+          "max": 1049.999
+        },
+        "diamond": {
+          "min": 1050,
+          "max": 1100
+        }
+      },
+      "great_one_supported": false
+    },
+    "gemsbok": {
+      "bands": {
+        "bronze": {
+          "min": 154,
+          "max": 194.799
+        },
+        "silver": {
+          "min": 194.8,
+          "max": 276.399
+        },
+        "gold": {
+          "min": 276.4,
+          "max": 337.599
+        },
+        "diamond": {
+          "min": 337.6,
+          "max": 358
+        }
+      },
+      "great_one_supported": false
+    },
+    "goldeneye": {
+      "bands": {
+        "bronze": {
+          "min": 600,
+          "max": 739.999
+        },
+        "silver": {
+          "min": 740,
+          "max": 1019.999
+        },
+        "gold": {
+          "min": 1020,
+          "max": 1229.999
+        },
+        "diamond": {
+          "min": 1230,
+          "max": 1300
+        }
+      },
+      "great_one_supported": false
+    },
+    "gray_fox": {
+      "bands": {
+        "bronze": {
+          "min": 3.1,
+          "max": 3.839
+        },
+        "silver": {
+          "min": 3.84,
+          "max": 5.319
+        },
+        "gold": {
+          "min": 5.32,
+          "max": 6.429
+        },
+        "diamond": {
+          "min": 6.43,
+          "max": 6.8
+        }
+      },
+      "great_one_supported": false
+    },
+    "gray_wolf": {
+      "bands": {
+        "bronze": {
+          "min": 30,
+          "max": 31.999
+        },
+        "silver": {
+          "min": 32,
+          "max": 35.999
+        },
+        "gold": {
+          "min": 36,
+          "max": 38.999
+        },
+        "diamond": {
+          "min": 39,
+          "max": 40
+        }
+      },
+      "great_one_supported": true
+    },
+    "greater_grison": {
+      "bands": {
+        "bronze": {
+          "min": 140,
+          "max": 187.999
+        },
+        "silver": {
+          "min": 188,
+          "max": 283.999
+        },
+        "gold": {
+          "min": 284,
+          "max": 355.999
+        },
+        "diamond": {
+          "min": 356,
+          "max": 380
+        }
+      },
+      "great_one_supported": false
+    },
+    "gredos_ibex": {
+      "bands": {
+        "bronze": {
+          "min": 41.251,
+          "max": 54.344
+        },
+        "silver": {
+          "min": 54.345,
+          "max": 80.531
+        },
+        "gold": {
+          "min": 80.532,
+          "max": 100.171
+        },
+        "diamond": {
+          "min": 100.172,
+          "max": 106.719
+        }
+      },
+      "great_one_supported": false
+    },
+    "green_wing_teal": {
+      "bands": {
+        "bronze": {
+          "min": 300,
+          "max": 339.999
+        },
+        "silver": {
+          "min": 340,
+          "max": 419.999
+        },
+        "gold": {
+          "min": 420,
+          "max": 479.999
+        },
+        "diamond": {
+          "min": 480,
+          "max": 500
+        }
+      },
+      "great_one_supported": false
+    },
+    "greylag_goose": {
+      "bands": {
+        "bronze": {
+          "min": 2.5,
+          "max": 2.799
+        },
+        "silver": {
+          "min": 2.8,
+          "max": 3.399
+        },
+        "gold": {
+          "min": 3.4,
+          "max": 3.849
+        },
+        "diamond": {
+          "min": 3.85,
+          "max": 4
+        }
+      },
+      "great_one_supported": false
+    },
+    "grizzly_bear": {
+      "bands": {
+        "bronze": {
+          "min": 48.5,
+          "max": 52.599
+        },
+        "silver": {
+          "min": 52.6,
+          "max": 60.799
+        },
+        "gold": {
+          "min": 60.8,
+          "max": 66.949
+        },
+        "diamond": {
+          "min": 66.95,
+          "max": 69
+        }
+      },
+      "great_one_supported": false
+    },
+    "harlequin_duck": {
+      "bands": {
+        "bronze": {
+          "min": 4.8,
+          "max": 5.339
+        },
+        "silver": {
+          "min": 5.34,
+          "max": 6.419
+        },
+        "gold": {
+          "min": 6.42,
+          "max": 7.229
+        },
+        "diamond": {
+          "min": 7.23,
+          "max": 7.5
+        }
+      },
+      "great_one_supported": false
+    },
+    "hazel_grouse": {
+      "bands": {
+        "bronze": {
+          "min": 300,
+          "max": 329.999
+        },
+        "silver": {
+          "min": 330,
+          "max": 389.999
+        },
+        "gold": {
+          "min": 390,
+          "max": 434.999
+        },
+        "diamond": {
+          "min": 435,
+          "max": 450
+        }
+      },
+      "great_one_supported": false
+    },
+    "hog_deer": {
+      "bands": {
+        "bronze": {
+          "min": 32.53,
+          "max": 49.453
+        },
+        "silver": {
+          "min": 49.454,
+          "max": 83.302
+        },
+        "gold": {
+          "min": 83.303,
+          "max": 108.688
+        },
+        "diamond": {
+          "min": 108.689,
+          "max": 117.151
+        }
+      },
+      "great_one_supported": false
+    },
+    "iberian_mouflon": {
+      "bands": {
+        "bronze": {
+          "min": 73.424,
+          "max": 97.01
+        },
+        "silver": {
+          "min": 97.011,
+          "max": 144.185
+        },
+        "gold": {
+          "min": 144.186,
+          "max": 179.565
+        },
+        "diamond": {
+          "min": 179.566,
+          "max": 191.36
+        }
+      },
+      "great_one_supported": false
+    },
+    "iberian_wolf": {
+      "bands": {
+        "bronze": {
+          "min": 30,
+          "max": 31.999
+        },
+        "silver": {
+          "min": 32,
+          "max": 35.999
+        },
+        "gold": {
+          "min": 36,
+          "max": 38.999
+        },
+        "diamond": {
+          "min": 39,
+          "max": 40
+        }
+      },
+      "great_one_supported": false
+    },
+    "jackrabbit": {
+      "bands": {
+        "bronze": {
+          "min": 1.9,
+          "max": 2.885
+        },
+        "silver": {
+          "min": 2.886,
+          "max": 4.857
+        },
+        "gold": {
+          "min": 4.858,
+          "max": 6.336
+        },
+        "diamond": {
+          "min": 6.337,
+          "max": 6.83
+        }
+      },
+      "great_one_supported": false
+    },
+    "jaguar": {
+      "bands": {
+        "bronze": {
+          "min": 32.5,
+          "max": 34.999
+        },
+        "silver": {
+          "min": 35,
+          "max": 39.999
+        },
+        "gold": {
+          "min": 40,
+          "max": 43.749
+        },
+        "diamond": {
+          "min": 43.75,
+          "max": 45
+        }
+      },
+      "great_one_supported": true
+    },
+    "javan_rusa": {
+      "bands": {
+        "bronze": {
+          "min": 40.578,
+          "max": 64.623
+        },
+        "silver": {
+          "min": 64.624,
+          "max": 112.716
+        },
+        "gold": {
+          "min": 112.717,
+          "max": 148.786
+        },
+        "diamond": {
+          "min": 148.787,
+          "max": 160.81
+        }
+      },
+      "great_one_supported": false
+    },
+    "lesser_kudu": {
+      "bands": {
+        "bronze": {
+          "min": 95.317,
+          "max": 107.833
+        },
+        "silver": {
+          "min": 107.834,
+          "max": 132.866
+        },
+        "gold": {
+          "min": 132.867,
+          "max": 151.642
+        },
+        "diamond": {
+          "min": 151.643,
+          "max": 157.901
+        }
+      },
+      "great_one_supported": false
+    },
+    "lion": {
+      "bands": {
+        "bronze": {
+          "min": 35,
+          "max": 37.999
+        },
+        "silver": {
+          "min": 38,
+          "max": 43.999
+        },
+        "gold": {
+          "min": 44,
+          "max": 48.499
+        },
+        "diamond": {
+          "min": 48.5,
+          "max": 50
+        }
+      },
+      "great_one_supported": false
+    },
+    "magpie_goose": {
+      "bands": {
+        "bronze": {
+          "min": 1.4,
+          "max": 1.759
+        },
+        "silver": {
+          "min": 1.76,
+          "max": 2.479
+        },
+        "gold": {
+          "min": 2.48,
+          "max": 3.019
+        },
+        "diamond": {
+          "min": 3.02,
+          "max": 3.2
+        }
+      },
+      "great_one_supported": false
+    },
+    "mallard": {
+      "bands": {
+        "bronze": {
+          "min": 7.2,
+          "max": 9.959
+        },
+        "silver": {
+          "min": 9.96,
+          "max": 15.479
+        },
+        "gold": {
+          "min": 15.48,
+          "max": 19.619
+        },
+        "diamond": {
+          "min": 19.62,
+          "max": 21
+        }
+      },
+      "great_one_supported": false
+    },
+    "manitoban_elk": {
+      "bands": {
+        "bronze": {
+          "min": 61.007,
+          "max": 149.131
+        },
+        "silver": {
+          "min": 149.132,
+          "max": 325.38
+        },
+        "gold": {
+          "min": 325.381,
+          "max": 457.567
+        },
+        "diamond": {
+          "min": 457.568,
+          "max": 501.63
+        }
+      },
+      "great_one_supported": false
+    },
+    "mexican_bobcat": {
+      "bands": {
+        "bronze": {
+          "min": 15.99,
+          "max": 18.587
+        },
+        "silver": {
+          "min": 18.588,
+          "max": 23.783
+        },
+        "gold": {
+          "min": 23.784,
+          "max": 27.68
+        },
+        "diamond": {
+          "min": 27.681,
+          "max": 28.98
+        }
+      },
+      "great_one_supported": false
+    },
+    "moose": {
+      "bands": {
+        "bronze": {
+          "min": 32.296,
+          "max": 86.228
+        },
+        "silver": {
+          "min": 86.229,
+          "max": 194.093
+        },
+        "gold": {
+          "min": 194.094,
+          "max": 274.992
+        },
+        "diamond": {
+          "min": 274.993,
+          "max": 301.959
+        }
+      },
+      "great_one_supported": true
+    },
+    "mountain_goat": {
+      "bands": {
+        "bronze": {
+          "min": 37.021,
+          "max": 52.722
+        },
+        "silver": {
+          "min": 52.723,
+          "max": 84.125
+        },
+        "gold": {
+          "min": 84.126,
+          "max": 107.677
+        },
+        "diamond": {
+          "min": 107.678,
+          "max": 115.529
+        }
+      },
+      "great_one_supported": false
+    },
+    "mountain_hare": {
+      "bands": {
+        "bronze": {
+          "min": 2,
+          "max": 2.799
+        },
+        "silver": {
+          "min": 2.8,
+          "max": 4.399
+        },
+        "gold": {
+          "min": 4.4,
+          "max": 5.599
+        },
+        "diamond": {
+          "min": 5.6,
+          "max": 6
+        }
+      },
+      "great_one_supported": false
+    },
+    "mule_deer": {
+      "bands": {
+        "bronze": {
+          "min": 37.128,
+          "max": 98.198
+        },
+        "silver": {
+          "min": 98.199,
+          "max": 220.34
+        },
+        "gold": {
+          "min": 220.341,
+          "max": 311.946
+        },
+        "diamond": {
+          "min": 311.947,
+          "max": 342.483
+        }
+      },
+      "great_one_supported": true
+    },
+    "nilgai": {
+      "bands": {
+        "bronze": {
+          "min": 61.832,
+          "max": 69.178
+        },
+        "silver": {
+          "min": 69.179,
+          "max": 83.871
+        },
+        "gold": {
+          "min": 83.872,
+          "max": 94.892
+        },
+        "diamond": {
+          "min": 94.893,
+          "max": 98.566
+        }
+      },
+      "great_one_supported": false
+    },
+    "north_american_beaver": {
+      "bands": {
+        "bronze": {
+          "min": 16,
+          "max": 19.199
+        },
+        "silver": {
+          "min": 19.2,
+          "max": 25.599
+        },
+        "gold": {
+          "min": 25.6,
+          "max": 30.399
+        },
+        "diamond": {
+          "min": 30.4,
+          "max": 32
+        }
+      },
+      "great_one_supported": false
+    },
+    "northern_bobwhite_quail": {
+      "bands": {
+        "bronze": {
+          "min": 130,
+          "max": 153.999
+        },
+        "silver": {
+          "min": 154,
+          "max": 201.999
+        },
+        "gold": {
+          "min": 202,
+          "max": 237.999
+        },
+        "diamond": {
+          "min": 238,
+          "max": 250
+        }
+      },
+      "great_one_supported": false
+    },
+    "northern_pintail": {
+      "bands": {
+        "bronze": {
+          "min": 500,
+          "max": 619.999
+        },
+        "silver": {
+          "min": 620,
+          "max": 859.999
+        },
+        "gold": {
+          "min": 860,
+          "max": 1039.999
+        },
+        "diamond": {
+          "min": 1040,
+          "max": 1100
+        }
+      },
+      "great_one_supported": false
+    },
+    "northern_red_muntjac": {
+      "bands": {
+        "bronze": {
+          "min": 22.403,
+          "max": 25.256
+        },
+        "silver": {
+          "min": 25.257,
+          "max": 30.964
+        },
+        "gold": {
+          "min": 30.965,
+          "max": 35.245
+        },
+        "diamond": {
+          "min": 35.246,
+          "max": 36.673
+        }
+      },
+      "great_one_supported": false
+    },
+    "ocelot": {
+      "bands": {
+        "bronze": {
+          "min": 15.99,
+          "max": 18.587
+        },
+        "silver": {
+          "min": 18.588,
+          "max": 23.783
+        },
+        "gold": {
+          "min": 23.784,
+          "max": 27.68
+        },
+        "diamond": {
+          "min": 27.681,
+          "max": 28.98
+        }
+      },
+      "great_one_supported": false
+    },
+    "pheasant": {
+      "bands": {
+        "bronze": {
+          "min": 5.9,
+          "max": 9.099
+        },
+        "silver": {
+          "min": 9.1,
+          "max": 15.499
+        },
+        "gold": {
+          "min": 15.5,
+          "max": 20.299
+        },
+        "diamond": {
+          "min": 20.3,
+          "max": 21.9
+        }
+      },
+      "great_one_supported": true
+    },
+    "plains_bison": {
+      "bands": {
+        "bronze": {
+          "min": 98.947,
+          "max": 117.736
+        },
+        "silver": {
+          "min": 117.737,
+          "max": 155.316
+        },
+        "gold": {
+          "min": 155.317,
+          "max": 183.501
+        },
+        "diamond": {
+          "min": 183.502,
+          "max": 192.897
+        }
+      },
+      "great_one_supported": false
+    },
+    "prong_horn": {
+      "bands": {
+        "bronze": {
+          "min": 53.263,
+          "max": 66.248
+        },
+        "silver": {
+          "min": 66.249,
+          "max": 92.221
+        },
+        "gold": {
+          "min": 92.222,
+          "max": 111.701
+        },
+        "diamond": {
+          "min": 111.702,
+          "max": 118.195
+        }
+      },
+      "great_one_supported": false
+    },
+    "puma": {
+      "bands": {
+        "bronze": {
+          "min": 30,
+          "max": 31.999
+        },
+        "silver": {
+          "min": 32,
+          "max": 35.999
+        },
+        "gold": {
+          "min": 36,
+          "max": 38.999
+        },
+        "diamond": {
+          "min": 39,
+          "max": 40
+        }
+      },
+      "great_one_supported": false
+    },
+    "raccoon": {
+      "bands": {
+        "bronze": {
+          "min": 3,
+          "max": 4.999
+        },
+        "silver": {
+          "min": 5,
+          "max": 8.999
+        },
+        "gold": {
+          "min": 9,
+          "max": 11.999
+        },
+        "diamond": {
+          "min": 12,
+          "max": 13
+        }
+      },
+      "great_one_supported": false
+    },
+    "raccoon_dog": {
+      "bands": {
+        "bronze": {
+          "min": 3,
+          "max": 4.399
+        },
+        "silver": {
+          "min": 4.4,
+          "max": 7.199
+        },
+        "gold": {
+          "min": 7.2,
+          "max": 9.299
+        },
+        "diamond": {
+          "min": 9.3,
+          "max": 10
+        }
+      },
+      "great_one_supported": false
+    },
+    "red_deer": {
+      "bands": {
+        "bronze": {
+          "min": 44.627,
+          "max": 90.504
+        },
+        "silver": {
+          "min": 90.505,
+          "max": 182.259
+        },
+        "gold": {
+          "min": 182.26,
+          "max": 251.075
+        },
+        "diamond": {
+          "min": 251.076,
+          "max": 274.015
+        }
+      },
+      "great_one_supported": true
+    },
+    "red_fox": {
+      "bands": {
+        "bronze": {
+          "min": 1.98,
+          "max": 4.663
+        },
+        "silver": {
+          "min": 4.664,
+          "max": 10.031
+        },
+        "gold": {
+          "min": 10.032,
+          "max": 14.057
+        },
+        "diamond": {
+          "min": 14.058,
+          "max": 15.4
+        }
+      },
+      "great_one_supported": true
+    },
+    "red_grouse": {
+      "bands": {
+        "bronze": {
+          "min": 52.5,
+          "max": 56.999
+        },
+        "silver": {
+          "min": 57,
+          "max": 65.999
+        },
+        "gold": {
+          "min": 66,
+          "max": 72.749
+        },
+        "diamond": {
+          "min": 72.75,
+          "max": 75
+        }
+      },
+      "great_one_supported": false
+    },
+    "reindeer": {
+      "bands": {
+        "bronze": {
+          "min": 73.194,
+          "max": 152.535
+        },
+        "silver": {
+          "min": 152.536,
+          "max": 311.218
+        },
+        "gold": {
+          "min": 311.219,
+          "max": 430.231
+        },
+        "diamond": {
+          "min": 430.232,
+          "max": 469.903
+        }
+      },
+      "great_one_supported": false
+    },
+    "rio_grande_turkey": {
+      "bands": {
+        "bronze": {
+          "min": 3,
+          "max": 3.359
+        },
+        "silver": {
+          "min": 3.36,
+          "max": 4.079
+        },
+        "gold": {
+          "min": 4.08,
+          "max": 4.619
+        },
+        "diamond": {
+          "min": 4.62,
+          "max": 4.8
+        }
+      },
+      "great_one_supported": false
+    },
+    "rock_ptarmigan": {
+      "bands": {
+        "bronze": {
+          "min": 430,
+          "max": 491.999
+        },
+        "silver": {
+          "min": 492,
+          "max": 615.999
+        },
+        "gold": {
+          "min": 616,
+          "max": 708.999
+        },
+        "diamond": {
+          "min": 709,
+          "max": 740
+        }
+      },
+      "great_one_supported": false
+    },
+    "rockymountain_elk": {
+      "bands": {
+        "bronze": {
+          "min": 91.137,
+          "max": 177.864
+        },
+        "silver": {
+          "min": 177.865,
+          "max": 351.32
+        },
+        "gold": {
+          "min": 351.321,
+          "max": 481.412
+        },
+        "diamond": {
+          "min": 481.413,
+          "max": 524.777
+        }
+      },
+      "great_one_supported": false
+    },
+    "roe_deer": {
+      "bands": {
+        "bronze": {
+          "min": 29.386,
+          "max": 41.047
+        },
+        "silver": {
+          "min": 41.048,
+          "max": 64.372
+        },
+        "gold": {
+          "min": 64.373,
+          "max": 81.865
+        },
+        "diamond": {
+          "min": 81.866,
+          "max": 87.697
+        }
+      },
+      "great_one_supported": true
+    },
+    "ronda_ibex": {
+      "bands": {
+        "bronze": {
+          "min": 58.244,
+          "max": 69.298
+        },
+        "silver": {
+          "min": 69.299,
+          "max": 91.407
+        },
+        "gold": {
+          "min": 91.408,
+          "max": 107.989
+        },
+        "diamond": {
+          "min": 107.99,
+          "max": 113.517
+        }
+      },
+      "great_one_supported": false
+    },
+    "roosevelt_elk": {
+      "bands": {
+        "bronze": {
+          "min": 56.666,
+          "max": 128.704
+        },
+        "silver": {
+          "min": 128.705,
+          "max": 272.782
+        },
+        "gold": {
+          "min": 272.783,
+          "max": 380.84
+        },
+        "diamond": {
+          "min": 380.841,
+          "max": 416.861
+        }
+      },
+      "great_one_supported": false
+    },
+    "saltwater_crocodile": {
+      "bands": {
+        "bronze": {
+          "min": 250,
+          "max": 419.999
+        },
+        "silver": {
+          "min": 420,
+          "max": 759.999
+        },
+        "gold": {
+          "min": 760,
+          "max": 1014.999
+        },
+        "diamond": {
+          "min": 1015,
+          "max": 1100
+        }
+      },
+      "great_one_supported": false
+    },
+    "sambar": {
+      "bands": {
+        "bronze": {
+          "min": 39.775,
+          "max": 67.92
+        },
+        "silver": {
+          "min": 67.921,
+          "max": 124.213
+        },
+        "gold": {
+          "min": 124.214,
+          "max": 166.433
+        },
+        "diamond": {
+          "min": 166.434,
+          "max": 180.507
+        }
+      },
+      "great_one_supported": false
+    },
+    "scrub_hare": {
+      "bands": {
+        "bronze": {
+          "min": 1.5,
+          "max": 2.359
+        },
+        "silver": {
+          "min": 2.36,
+          "max": 4.079
+        },
+        "gold": {
+          "min": 4.08,
+          "max": 5.369
+        },
+        "diamond": {
+          "min": 5.37,
+          "max": 5.8
+        }
+      },
+      "great_one_supported": false
+    },
+    "siberian_musk_deer": {
+      "bands": {
+        "bronze": {
+          "min": 6,
+          "max": 59.999
+        },
+        "silver": {
+          "min": 60,
+          "max": 167.999
+        },
+        "gold": {
+          "min": 168,
+          "max": 248.999
+        },
+        "diamond": {
+          "min": 249,
+          "max": 276
+        }
+      },
+      "great_one_supported": false
+    },
+    "sidestriped_jackal": {
+      "bands": {
+        "bronze": {
+          "min": 13.228,
+          "max": 16.754
+        },
+        "silver": {
+          "min": 16.755,
+          "max": 23.809
+        },
+        "gold": {
+          "min": 23.81,
+          "max": 29.1
+        },
+        "diamond": {
+          "min": 29.101,
+          "max": 30.865
+        }
+      },
+      "great_one_supported": false
+    },
+    "sika_deer": {
+      "bands": {
+        "bronze": {
+          "min": 11.735,
+          "max": 53.292
+        },
+        "silver": {
+          "min": 53.293,
+          "max": 136.407
+        },
+        "gold": {
+          "min": 136.408,
+          "max": 198.744
+        },
+        "diamond": {
+          "min": 198.745,
+          "max": 219.524
+        }
+      },
+      "great_one_supported": false
+    },
+    "snow_goose": {
+      "bands": {
+        "bronze": {
+          "min": 2.5,
+          "max": 2.799
+        },
+        "silver": {
+          "min": 2.8,
+          "max": 3.399
+        },
+        "gold": {
+          "min": 3.4,
+          "max": 3.849
+        },
+        "diamond": {
+          "min": 3.85,
+          "max": 4
+        }
+      },
+      "great_one_supported": false
+    },
+    "snow_leopard": {
+      "bands": {
+        "bronze": {
+          "min": 20,
+          "max": 21.999
+        },
+        "silver": {
+          "min": 22,
+          "max": 25.999
+        },
+        "gold": {
+          "min": 26,
+          "max": 28.999
+        },
+        "diamond": {
+          "min": 29,
+          "max": 30
+        }
+      },
+      "great_one_supported": false
+    },
+    "south_american_tapir": {
+      "bands": {
+        "bronze": {
+          "min": 90,
+          "max": 101.999
+        },
+        "silver": {
+          "min": 102,
+          "max": 125.999
+        },
+        "gold": {
+          "min": 126,
+          "max": 143.999
+        },
+        "diamond": {
+          "min": 144,
+          "max": 150
+        }
+      },
+      "great_one_supported": false
+    },
+    "southeastern_ibex": {
+      "bands": {
+        "bronze": {
+          "min": 38.32,
+          "max": 49.732
+        },
+        "silver": {
+          "min": 49.733,
+          "max": 72.559
+        },
+        "gold": {
+          "min": 72.56,
+          "max": 89.679
+        },
+        "diamond": {
+          "min": 89.68,
+          "max": 95.387
+        }
+      },
+      "great_one_supported": false
+    },
+    "spectacled_bear": {
+      "bands": {
+        "bronze": {
+          "min": 6.5,
+          "max": 9.599
+        },
+        "silver": {
+          "min": 9.6,
+          "max": 15.799
+        },
+        "gold": {
+          "min": 15.8,
+          "max": 20.449
+        },
+        "diamond": {
+          "min": 20.45,
+          "max": 22
+        }
+      },
+      "great_one_supported": false
+    },
+    "springbok": {
+      "bands": {
+        "bronze": {
+          "min": 24.433,
+          "max": 36.459
+        },
+        "silver": {
+          "min": 36.46,
+          "max": 60.514
+        },
+        "gold": {
+          "min": 60.515,
+          "max": 78.555
+        },
+        "diamond": {
+          "min": 78.556,
+          "max": 84.57
+        }
+      },
+      "great_one_supported": false
+    },
+    "stubble_quail": {
+      "bands": {
+        "bronze": {
+          "min": 90,
+          "max": 97.999
+        },
+        "silver": {
+          "min": 98,
+          "max": 113.999
+        },
+        "gold": {
+          "min": 114,
+          "max": 125.999
+        },
+        "diamond": {
+          "min": 126,
+          "max": 130
+        }
+      },
+      "great_one_supported": false
+    },
+    "tahr": {
+      "bands": {
+        "bronze": {
+          "min": 49.628,
+          "max": 61.238
+        },
+        "silver": {
+          "min": 61.239,
+          "max": 84.461
+        },
+        "gold": {
+          "min": 84.462,
+          "max": 101.878
+        },
+        "diamond": {
+          "min": 101.879,
+          "max": 107.685
+        }
+      },
+      "great_one_supported": true
+    },
+    "taruca": {
+      "bands": {
+        "bronze": {
+          "min": 57.609,
+          "max": 67.397
+        },
+        "silver": {
+          "min": 67.398,
+          "max": 86.976
+        },
+        "gold": {
+          "min": 86.977,
+          "max": 101.659
+        },
+        "diamond": {
+          "min": 101.66,
+          "max": 106.555
+        }
+      },
+      "great_one_supported": false
+    },
+    "tibetan_fox": {
+      "bands": {
+        "bronze": {
+          "min": 2.5,
+          "max": 3.359
+        },
+        "silver": {
+          "min": 3.36,
+          "max": 5.079
+        },
+        "gold": {
+          "min": 5.08,
+          "max": 6.369
+        },
+        "diamond": {
+          "min": 6.37,
+          "max": 6.8
+        }
+      },
+      "great_one_supported": false
+    },
+    "tufted_duck": {
+      "bands": {
+        "bronze": {
+          "min": 630,
+          "max": 703.999
+        },
+        "silver": {
+          "min": 704,
+          "max": 851.999
+        },
+        "gold": {
+          "min": 852,
+          "max": 962.999
+        },
+        "diamond": {
+          "min": 963,
+          "max": 1000
+        }
+      },
+      "great_one_supported": false
+    },
+    "tundra_bean_goose": {
+      "bands": {
+        "bronze": {
+          "min": 1.9,
+          "max": 2.179
+        },
+        "silver": {
+          "min": 2.18,
+          "max": 2.739
+        },
+        "gold": {
+          "min": 2.74,
+          "max": 3.159
+        },
+        "diamond": {
+          "min": 3.16,
+          "max": 3.3
+        }
+      },
+      "great_one_supported": false
+    },
+    "vicuna": {
+      "bands": {
+        "bronze": {
+          "min": 160,
+          "max": 171.999
+        },
+        "silver": {
+          "min": 172,
+          "max": 195.999
+        },
+        "gold": {
+          "min": 196,
+          "max": 213.999
+        },
+        "diamond": {
+          "min": 214,
+          "max": 220
+        }
+      },
+      "great_one_supported": false
+    },
+    "warthog": {
+      "bands": {
+        "bronze": {
+          "min": 15,
+          "max": 24.599
+        },
+        "silver": {
+          "min": 24.6,
+          "max": 43.799
+        },
+        "gold": {
+          "min": 43.8,
+          "max": 58.199
+        },
+        "diamond": {
+          "min": 58.2,
+          "max": 63
+        }
+      },
+      "great_one_supported": false
+    },
+    "water_buffalo": {
+      "bands": {
+        "bronze": {
+          "min": 60.488,
+          "max": 84.277
+        },
+        "silver": {
+          "min": 84.278,
+          "max": 131.858
+        },
+        "gold": {
+          "min": 131.859,
+          "max": 167.543
+        },
+        "diamond": {
+          "min": 167.544,
+          "max": 179.439
+        }
+      },
+      "great_one_supported": false
+    },
+    "western_capercaillie": {
+      "bands": {
+        "bronze": {
+          "min": 1.5,
+          "max": 2.199
+        },
+        "silver": {
+          "min": 2.2,
+          "max": 3.599
+        },
+        "gold": {
+          "min": 3.6,
+          "max": 4.649
+        },
+        "diamond": {
+          "min": 4.65,
+          "max": 5
+        }
+      },
+      "great_one_supported": false
+    },
+    "western_mountain_coati": {
+      "bands": {
+        "bronze": {
+          "min": 1,
+          "max": 1.099
+        },
+        "silver": {
+          "min": 1.1,
+          "max": 1.299
+        },
+        "gold": {
+          "min": 1.3,
+          "max": 1.449
+        },
+        "diamond": {
+          "min": 1.45,
+          "max": 1.5
+        }
+      },
+      "great_one_supported": false
+    },
+    "whitetail_deer": {
+      "bands": {
+        "bronze": {
+          "min": 71.181,
+          "max": 112.051
+        },
+        "silver": {
+          "min": 112.052,
+          "max": 193.792
+        },
+        "gold": {
+          "min": 193.793,
+          "max": 255.099
+        },
+        "diamond": {
+          "min": 255.1,
+          "max": 275.535
+        }
+      },
+      "great_one_supported": true
+    },
+    "wild_boar": {
+      "bands": {
+        "bronze": {
+          "min": 7,
+          "max": 37.499
+        },
+        "silver": {
+          "min": 37.5,
+          "max": 98.499
+        },
+        "gold": {
+          "min": 98.5,
+          "max": 144.249
+        },
+        "diamond": {
+          "min": 144.25,
+          "max": 159.5
+        }
+      },
+      "great_one_supported": true
+    },
+    "wild_haggis": {
+      "bands": {
+        "bronze": {
+          "min": 30,
+          "max": 35.999
+        },
+        "silver": {
+          "min": 36,
+          "max": 47.999
+        },
+        "gold": {
+          "min": 48,
+          "max": 56.999
+        },
+        "diamond": {
+          "min": 57,
+          "max": 60
+        }
+      },
+      "great_one_supported": false
+    },
+    "wild_turkey": {
+      "bands": {
+        "bronze": {
+          "min": 3,
+          "max": 3.359
+        },
+        "silver": {
+          "min": 3.36,
+          "max": 4.079
+        },
+        "gold": {
+          "min": 4.08,
+          "max": 4.619
+        },
+        "diamond": {
+          "min": 4.62,
+          "max": 4.8
+        }
+      },
+      "great_one_supported": false
+    },
+    "wild_yak": {
+      "bands": {
+        "bronze": {
+          "min": 146.424,
+          "max": 174.603
+        },
+        "silver": {
+          "min": 174.604,
+          "max": 230.962
+        },
+        "gold": {
+          "min": 230.963,
+          "max": 273.232
+        },
+        "diamond": {
+          "min": 273.233,
+          "max": 287.323
+        }
+      },
+      "great_one_supported": false
+    },
+    "willow_ptarmigan": {
+      "bands": {
+        "bronze": {
+          "min": 430,
+          "max": 505.999
+        },
+        "silver": {
+          "min": 506,
+          "max": 657.999
+        },
+        "gold": {
+          "min": 658,
+          "max": 771.999
+        },
+        "diamond": {
+          "min": 772,
+          "max": 810
+        }
+      },
+      "great_one_supported": false
+    },
+    "wood_bison": {
+      "bands": {
+        "bronze": {
+          "min": 79.274,
+          "max": 96.768
+        },
+        "silver": {
+          "min": 96.769,
+          "max": 131.759
+        },
+        "gold": {
+          "min": 131.76,
+          "max": 158.001
+        },
+        "diamond": {
+          "min": 158.002,
+          "max": 166.75
+        }
+      },
+      "great_one_supported": false
+    },
+    "wood_duck": {
+      "bands": {
+        "bronze": {
+          "min": 400,
+          "max": 459.999
+        },
+        "silver": {
+          "min": 460,
+          "max": 579.999
+        },
+        "gold": {
+          "min": 580,
+          "max": 669.999
+        },
+        "diamond": {
+          "min": 670,
+          "max": 700
+        }
+      },
+      "great_one_supported": false
+    },
+    "woodland_caribou": {
+      "bands": {
+        "bronze": {
+          "min": 73.194,
+          "max": 152.535
+        },
+        "silver": {
+          "min": 152.536,
+          "max": 311.218
+        },
+        "gold": {
+          "min": 311.219,
+          "max": 430.231
+        },
+        "diamond": {
+          "min": 430.232,
+          "max": 469.903
+        }
+      },
+      "great_one_supported": false
+    },
+    "woolly_hare": {
+      "bands": {
+        "bronze": {
+          "min": 1.3,
+          "max": 1.739
+        },
+        "silver": {
+          "min": 1.74,
+          "max": 2.619
+        },
+        "gold": {
+          "min": 2.62,
+          "max": 3.279
+        },
+        "diamond": {
+          "min": 3.28,
+          "max": 3.5
+        }
+      },
+      "great_one_supported": false
+    }
+  }
+}

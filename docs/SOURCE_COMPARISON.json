@@ -1,0 +1,165 @@
+{
+  "source_scope": "solo_helper_runtime",
+  "original_git_history_included": false,
+  "original_game_assets_included": false,
+  "release_zip_sha256": "9006db4c73fa453332abc43ac93e1de7ee333b1f69fb71e90f531670c42d9e6a",
+  "release_executable_sha256": "0e3017871347e0ca3714a2426ad050f5e23becf36e47c30e6c41f06d37629729",
+  "binary_comparison_method": "Python bytecode, names, flags, exception table and recursive constants; filenames/line numbers ignored",
+  "module_comparison": [
+    {
+      "module": "config",
+      "source": "config.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "memory.process_reader",
+      "source": "memory/process_reader.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "services.fonts",
+      "source": "services/fonts.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "services.i18n",
+      "source": "services/i18n.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "services.path_finder",
+      "source": "services/path_finder.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "services.population_file",
+      "source": "services/population_file.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.adf",
+      "source": "solo_helper/adf.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.archives",
+      "source": "solo_helper/archives.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.builder",
+      "source": "solo_helper/builder.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.caller_patch",
+      "source": "solo_helper/caller_patch.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.config",
+      "source": "solo_helper/config.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.ground_mesh",
+      "source": "solo_helper/ground_mesh.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.installer",
+      "source": "solo_helper/installer.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.main",
+      "source": "solo_helper/main.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.native_request",
+      "source": "solo_helper/native_request.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.native_request_trial",
+      "source": "solo_helper/native_request_trial.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.physics_research",
+      "source": "solo_helper/physics_research.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.player_research",
+      "source": "solo_helper/player_research.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.position_trial",
+      "source": "solo_helper/position_trial.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.pressure",
+      "source": "solo_helper/pressure.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.probe_native_points",
+      "source": "solo_helper/probe_native_points.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.rtpc",
+      "source": "solo_helper/rtpc.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.sdf_mesh_research",
+      "source": "solo_helper/sdf_mesh_research.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.surface_plan",
+      "source": "solo_helper/surface_plan.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.terrain_research",
+      "source": "solo_helper/terrain_research.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.trial_guard",
+      "source": "solo_helper/trial_guard.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.virtual_tent_marker",
+      "source": "solo_helper/virtual_tent_marker.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.visited_ground",
+      "source": "solo_helper/visited_ground.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.waypoint_reader",
+      "source": "solo_helper/waypoint_reader.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper.window_layout",
+      "source": "solo_helper/window_layout.py",
+      "instructions_and_constants_match": true
+    },
+    {
+      "module": "solo_helper_launcher",
+      "source": "solo_helper_launcher.py",
+      "instructions_and_constants_match": true
+    }
+  ]
+}
