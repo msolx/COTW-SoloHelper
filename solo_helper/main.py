@@ -2,6 +2,7 @@
 import json
 import math
 import sys
+from pathlib import Path
 from PySide6.QtCore import QThread,Signal,QLockFile
 from PySide6.QtGui import QShortcut,QKeySequence
 from PySide6.QtWidgets import QApplication,QWidget
@@ -197,10 +198,20 @@ class SoloWindow(QWidget):
             self.update_trial_button()
 
     def build_action(self):
+        existing = {}
+        if config.SETTINGS_FILE.is_file():
+            try:
+                raw = json.loads(config.SETTINGS_FILE.read_text(encoding='utf-8'))
+                for k, v in raw.items():
+                    if not k.startswith('surface_'):
+                        existing[k] = v
+            except Exception:
+                pass
         values = dict(multiplier=self.multiplier.value(),capacity=self.capacity.value(),
                       crouch=self.crouch.isChecked(),carry=self.carry.isChecked(),foxpro=self.foxpro.isChecked(),
                       spotting=self.spotting.isChecked(),spotting_seconds=self.spotting_seconds.value())
-        config.SETTINGS_FILE.write_text(json.dumps(values,ensure_ascii=False,indent=2),encoding='utf-8')
+        existing.update(values)
+        config.SETTINGS_FILE.write_text(json.dumps(existing,ensure_ascii=False,indent=2),encoding='utf-8')
         return lambda:build(values['multiplier'],values['capacity'],values['crouch'],values['carry'],
                             foxpro_enabled=values['foxpro'],spotting_enabled=values['spotting'],
                             spotting_seconds=values['spotting_seconds'])
@@ -259,6 +270,30 @@ class SoloWindow(QWidget):
         for control in self.setting_inputs:
             control.setEnabled(True)
         self.update_trial_button()
+
+    def select_game_dir(self):
+        from PySide6.QtWidgets import QFileDialog
+        chosen = QFileDialog.getExistingDirectory(self, "选择 theHunter: Call of the Wild 游戏安装根目录", str(config.GAME_DIR))
+        if not chosen:
+            return
+        p = Path(chosen).resolve()
+        if not (p / 'theHunterCotW_F.exe').is_file():
+            self.log.appendPlainText(f'所选目录未包含 theHunterCotW_F.exe：{p}')
+            self.activity.setText('所选目录无效：未找到 theHunterCotW_F.exe')
+            return
+        config.GAME_DIR = p
+        config.GAME_EXE = p / 'theHunterCotW_F.exe'
+        config.MANIFEST = p.parent.parent / 'appmanifest_518790.acf'
+        existing = {}
+        if config.SETTINGS_FILE.is_file():
+            try:
+                existing = json.loads(config.SETTINGS_FILE.read_text(encoding='utf-8'))
+            except Exception:
+                pass
+        existing['game_dir'] = str(p)
+        config.SETTINGS_FILE.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding='utf-8')
+        self.log.appendPlainText(f'已成功指定并保存游戏目录：{p}')
+        self.activity.setText(f'已指定游戏目录：{p.name}')
 
     def closeEvent(self,event):
         if self.task and self.task.isRunning():

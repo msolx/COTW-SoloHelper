@@ -15,7 +15,7 @@ from solo_helper.trial_guard import exclusive_position_trial
 
 
 def local_object(memory):
-    if memory.sha256 != config.EXPECTED_SHA256:
+    if not config.is_compatible_build(memory.sha256):
         raise ReadError('当前构建不支持位置实验')
     registry = pointer_at(memory, memory.base + config.PLAYER_REGISTRY_CANDIDATE)
     manager = pointer_at(memory, registry + 0x60)

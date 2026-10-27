@@ -29,7 +29,7 @@ class MarkerBinding:
 
 
 def find_marker(memory,identity,kinds=None):
-    if memory.sha256 != config.EXPECTED_SHA256:
+    if not config.is_compatible_build(memory.sha256):
         raise ReadError('临时航点图标仅支持精确构建')
     manager = pointer_at(memory,memory.base+config.WAYPOINT_MANAGER_CANDIDATE)
     descriptor = memory.read(manager+0x70,24)

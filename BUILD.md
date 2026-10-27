@@ -54,6 +54,6 @@ Rebuilt files may have different hashes due to build environment/metadata. These
 
 ## Real-game use is separate from building
 
-Mod generation at runtime requires the user's own supported game, with exact EXE/build/resource hashes. Static settings require normal game exit, local generation/installation, and the helper's dedicated Mod launch. Waypoint and pressure features require explicit single-player UI confirmation and appropriate normal Windows access. Build/test commands do not start the game, install a Mod, arm a waypoint, or clear pressure.
+Mod generation requires the user's own game resources. v1.1.0 reports the actual executable hash and permits experimental executable compatibility; original resource hashes and parser checks remain enforced. Recognition does not prove version compatibility. Static settings require normal game exit, local generation/installation, and the helper's dedicated Mod launch. Waypoint and pressure features require explicit single-player UI confirmation and appropriate normal Windows access. Build/test commands do not start the game, install a Mod, arm a waypoint, or clear pressure.
 
 The helper writes settings/status under its own local directory; frozen builds include a Local AppData fallback when their adjacent directory cannot be created. Game-installation permissions can still cause a controlled install refusal. Do not solve that by disabling protection.

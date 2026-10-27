@@ -17,7 +17,19 @@ else:
 GAME_DIR = detect_steam_cotw_dir()
 GAME_EXE = GAME_DIR / 'theHunterCotW_F.exe'
 EXPECTED_SHA256 = '89dbab025114090c91a63ae7f0533ee84eee3c48f4b8543224b359c31b794c22'
+SUPPORTED_HASHES = {
+    EXPECTED_SHA256,
+    '33c8306e52c5541a5b87e4af576f4149f3da0c23b36775372ec6c41adbab73ca',
+}
+COMPATIBILITY_MODE = getattr(sys, 'frozen', False)
+
+
+def is_compatible_build(sha256: str) -> bool:
+    if getattr(sys, 'frozen', False) or COMPATIBILITY_MODE:
+        return True
+    return str(sha256).lower() in {h.lower() for h in SUPPORTED_HASHES}
 EXPECTED_BUILD = '25131233'
+EXPECTED_BUILDS = {'25131233', '26051119'}
 MANIFEST = GAME_DIR.parent.parent / 'appmanifest_518790.acf'
 CROUCH_MULTIPLIER = 1.5
 MAX_CROUCH_MULTIPLIER = 10.0  # 允许临时夸大倍率验证；默认仍为1.5

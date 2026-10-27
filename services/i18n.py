@@ -62,8 +62,8 @@ def toggle_lang() -> str:
 TRANSLATIONS = {
     # ==================== 雷达 (Animal Radar) ====================
     'app_title_radar': {
-        LANG_ZH: 'COTW 动物雷达 & 游戏内悬浮窗 (v1.0.0)',
-        LANG_EN: 'COTW Live Animal Radar & In-Game Overlay (v1.0.0)',
+        LANG_ZH: 'COTW 动物雷达 & 游戏内悬浮窗 (v1.1.0)',
+        LANG_EN: 'COTW Live Animal Radar & In-Game Overlay (v1.1.0)',
     },
     'radar_banner_notice': {
         LANG_ZH: '现场测试 · 只读数据 · 摄像机近似 · 支持全19保护区统一北向显示',
@@ -342,6 +342,10 @@ TRANSLATIONS = {
     'btn_maintenance': {
         LANG_ZH: '维护',
         LANG_EN: 'Maintenance',
+    },
+    'menu_locate_game': {
+        LANG_ZH: '选择游戏安装根目录...',
+        LANG_EN: 'Locate Game Directory...',
     },
     'menu_verify_game': {
         LANG_ZH: '检查游戏版本',

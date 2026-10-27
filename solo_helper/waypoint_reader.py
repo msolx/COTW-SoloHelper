@@ -36,7 +36,7 @@ def marker_count(raw):
 
 
 def read_user_waypoint(memory):
-    if memory.sha256 != config.EXPECTED_SHA256:
+    if not config.is_compatible_build(memory.sha256):
         raise ReadError('航点读取不支持当前EXE哈希')
     manager = pointer_at(memory, memory.base + config.WAYPOINT_MANAGER_CANDIDATE)
     descriptor = memory.read(manager + 0x70, 24)

@@ -34,7 +34,7 @@ class PressureSnapshot:
 
 
 def read_pressure(memory):
-    if memory.sha256!=config.EXPECTED_SHA256:
+    if not config.is_compatible_build(memory.sha256):
         raise ReadError('狩猎压力构建不匹配')
     # 只校验固定构建的原生查询/纹理更新标记指令，不执行它们。
     code_guards=((memory.base+0x920b30,bytes.fromhex('48895150c6417c01c3')),

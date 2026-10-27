@@ -68,6 +68,7 @@ def retranslate_helper_ui(w):
     w.advanced.setText(t('btn_maintenance'))
 
     # 维护菜单
+    w.menu_locate.setText(t('menu_locate_game'))
     w.menu_verify.setText(t('menu_verify_game'))
     w.menu_build.setText(t('menu_build_only'))
     w.menu_install.setText(t('menu_install'))
@@ -219,6 +220,11 @@ def build_layout(w, values):
     w.advanced = QToolButton()
     w.advanced.setPopupMode(QToolButton.InstantPopup)
     menu = QMenu(w.advanced)
+    w.menu_locate = QAction('', menu)
+    w.menu_locate.triggered.connect(lambda checked=False: w.select_game_dir())
+    menu.addAction(w.menu_locate)
+    menu.addSeparator()
+
     w.menu_verify = QAction('', menu)
     w.menu_verify.triggered.connect(lambda checked=False: w.dispatch('verify'))
     menu.addAction(w.menu_verify)

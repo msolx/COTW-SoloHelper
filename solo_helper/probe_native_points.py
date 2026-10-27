@@ -19,11 +19,11 @@ def module_rva(memory,address):
 
 def native_request_snapshot(memory):
     """只读原生控制器请求；接口指针是本体+0x10，所有偏移以该接口为准。"""
-    if memory.sha256 != config.EXPECTED_SHA256:
+    if not config.is_compatible_build(memory.sha256):
         raise ReadError('原生请求仅支持精确构建')
     controller = pointer_at(memory,memory.base+0x27c3ae8)
     vtable = pointer_at(memory,controller)
-    if (vtable-memory.base != 0x1c2a208
+    if (vtable-memory.base not in (0x1c2a208, 0x1c2a218)
             or pointer_at(memory,vtable+0x98)-memory.base != 0x824c00
             or pointer_at(memory,vtable+0xa0)-memory.base != 0x8254b0):
         raise ReadError('原生请求控制器类型或方法变化，停止读取')
@@ -41,7 +41,7 @@ def native_request_snapshot(memory):
 
 
 def inspect_points(memory):
-    if memory.sha256 != config.EXPECTED_SHA256:
+    if not config.is_compatible_build(memory.sha256):
         raise ReadError('原生传送点探针仅支持精确构建')
     root = pointer_at(memory,memory.base+0x27c5dc8)  # A84755全局对象
     descriptor = memory.read(root+0x258,16)

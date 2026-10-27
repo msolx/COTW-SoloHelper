@@ -67,3 +67,11 @@ class NativeRequestTests(unittest.TestCase):
         memory.put(controller+0xf8,'<I',255)
         with self.assertRaises(ReadError):
             native_request_snapshot(memory)
+
+    def test_vtable_26051119_accepted(self):
+        memory, controller = self.fixture()
+        vtable2 = memory.base + 0x1c2a218
+        memory.put(controller, '<Q', vtable2)
+        memory.put(vtable2 + 0x98, '<Q', memory.base + 0x824c00)
+        memory.put(vtable2 + 0xa0, '<Q', memory.base + 0x8254b0)
+        self.assertEqual(native_request_snapshot(memory), dict(state=2, target_position=(100, 1030, 200)))

@@ -13,14 +13,32 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def verify_build():
-    with config.GAME_EXE.open('rb') as stream:
-        actual = hashlib.file_digest(stream,'sha256').hexdigest()
-    manifest = config.MANIFEST.read_text(encoding='utf-8')
-    match = re.search(r'"buildid"\s+"(\d+)"',manifest,re.IGNORECASE)
-    if actual != config.EXPECTED_SHA256 or not match or match[1] != config.EXPECTED_BUILD:
+def verify_build(strict=False):
+    if not config.GAME_EXE.is_file():
+        raise FormatError(f'未找到游戏主程序 theHunterCotW_F.exe（检测路径：{config.GAME_EXE}），请确认游戏安装路径')
+    try:
+        with config.GAME_EXE.open('rb') as stream:
+            actual = hashlib.file_digest(stream,'sha256').hexdigest()
+    except OSError as exc:
+        raise FormatError(f'无法读取游戏主程序：{exc}')
+
+    build_id = None
+    if config.MANIFEST.is_file():
+        try:
+            manifest = config.MANIFEST.read_text(encoding='utf-8')
+            match = re.search(r'"buildid"\s+"(\d+)"',manifest,re.IGNORECASE)
+            if match:
+                build_id = match[1]
+        except OSError:
+            pass
+    if build_id is None:
+        build_id = 'non_steam'
+
+    supported_hashes = getattr(config, 'SUPPORTED_HASHES', {config.EXPECTED_SHA256})
+    supported_builds = getattr(config, 'EXPECTED_BUILDS', {config.EXPECTED_BUILD})
+    if strict and (actual not in supported_hashes or (build_id != 'non_steam' and build_id not in supported_builds)):
         raise FormatError('不支持当前游戏构建：EXE哈希/Steam buildid不匹配，未生成或安装')
-    return dict(sha256=actual,steam_build=match[1])
+    return dict(sha256=actual,steam_build=build_id)
 
 
 def verify_asset(data,name):

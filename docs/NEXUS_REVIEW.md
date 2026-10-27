@@ -1,47 +1,50 @@
-# Helper manual-review email draft
+# Manual review email draft
 
-Use only if the actual Helper upload is quarantined. Replace `[HELPER MOD PAGE URL]` with that listing's URL; the separate radar page must not be represented as the Helper page. The author sends the support request; nothing in this repository sends email or edits Nexus.
+The author sends this message from the email associated with the Nexus account. Verify the username and upload the corresponding v1.1.0 artifact before sending. This draft does not send email or certify Nexus/antivirus approval.
 
 ```text
 To: support@nexusmods.com
-Subject: Manual review request - COTW SoloHelper V1.0.0
+Subject: Manual review request - COTW SoloHelper v1.1.0 (Mod 1195)
 
 Hello Nexus Mods Support,
 
-My COTW SoloHelper V1.0.0 upload was quarantined by the automated safety
-checks. Could you please review it?
+My previous upload was quarantined by the automated safety checks. I have
+prepared an updated v1.1.0 and published its corresponding separated source
+and build instructions. Could you please manually review the updated file?
 
-Mod page:
-[HELPER MOD PAGE URL]
+Nexus username: Zacks
+Mod page: https://www.nexusmods.com/thehuntercallofthewild/mods/1195
 
-Helper-only source:
-https://github.com/msolx/COTW-SoloHelper
+Source code: https://github.com/msolx/COTW-SoloHelper
+Build instructions: https://github.com/msolx/COTW-SoloHelper/blob/main/BUILD.md
+Source/artifact verification:
+https://github.com/msolx/COTW-SoloHelper/blob/main/docs/SOURCE_PROVENANCE.md
 
-Build instructions:
-https://github.com/msolx/COTW-SoloHelper/blob/main/BUILD.md
+This is a single-player modification tool and is NOT read-only. It uses
+standard Windows WriteProcessMemory calls for temporary waypoint-marker
+changes, redirecting one native fast-travel request, and clearing existing
+hunting pressure. Static mods are generated locally from the user's own
+game resources and installed only under navigator_solo. Game state effects
+may be persisted by normal game saves; the tool does not directly edit saves.
+It does not inject DLLs, install drivers, hook game functions, execute
+remote game functions or bypass game/system protection.
 
-This is an unofficial single-player modification tool for theHunter:
-Call of the Wild. Unlike my separate read-only radar, the Helper uses
-standard Windows WriteProcessMemory calls for explicitly confirmed
-waypoint fast-travel redirection, temporary waypoint marker changes
-and clearing existing hunting pressure. It also generates selected
-static parameter mods locally from the user's own game installation.
+The Windows application uses Python 3.12 x64, PySide6-Essentials 6.8.3 and
+PyInstaller 6.22.3 in onedir mode, with UPX disabled. The separated source
+build was tested successfully. Original game assets, saves, private
+settings, diagnostics and credentials are not included in the repository.
+Compatibility with unverified game versions is explicitly experimental.
 
-It does not inject DLLs, install kernel drivers, hook game functions,
-remotely execute game functions or bypass game/system protection.
-It does not directly edit save files, although the game can save the
-state effects of normal play after using the tool.
+The locally reviewed COTW_SoloHelper.exe has SHA-256:
+a2e840f6a08446b692b030d684de68c3882841bf85a1324730a8a61bae933034
 
-The Windows distribution bundles Python/Qt runtime libraries and is
-built with Python 3.12, PySide6-Essentials 6.8.3 and PyInstaller 6.22.3
-in onedir mode without UPX. docs/SOURCE_PROVENANCE.md documents the
-examined local artifact hashes and the source comparison.
-
-No antivirus clearance is claimed. Please let me know if a specific
-detection, packaging issue or additional build information is needed.
+All 31 embedded application modules matched the published runtime source
+by bytecode/constants comparison. This is not a claim of byte-identical
+rebuilds or antivirus clearance. If the submitted file has a specific
+detection, please let me know what additional information is needed.
 
 Thank you for your help.
 
 Best regards,
-msolx (GitHub)
+Zacks
 ```

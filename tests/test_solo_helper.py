@@ -4,6 +4,7 @@ import json
 import struct
 import tempfile
 import unittest
+import sys
 import time
 from pathlib import Path
 from unittest.mock import patch,Mock
@@ -200,6 +201,7 @@ class InstallationTests(unittest.TestCase):
         from solo_helper.main import SoloWindow
         app = QApplication.instance() or QApplication([])
         with patch.object(config,'SETTINGS_FILE',self.root/'settings.json'):
+            (self.root/'settings.json').write_text(json.dumps({'game_dir':'D:/custom','language':'zh'}))
             window = SoloWindow()
             try:
                 window.multiplier.setValue(1.5)
@@ -208,6 +210,91 @@ class InstallationTests(unittest.TestCase):
                 with patch('solo_helper.main.build',return_value={}) as build:
                     job()
                 self.assertEqual(build.call_args.args[:2],(1.5,512))
-                self.assertEqual(json.loads(config.SETTINGS_FILE.read_text())['multiplier'],1.5)
+                saved = json.loads(config.SETTINGS_FILE.read_text())
+                self.assertEqual(saved['multiplier'],1.5)
+                self.assertEqual(saved['game_dir'],'D:/custom')
+                self.assertEqual(saved['language'],'zh')
             finally:
                 window.close()
+
+    def test_select_game_dir_cancelled(self):
+        import os
+        os.environ.setdefault('QT_QPA_PLATFORM','offscreen')
+        from PySide6.QtWidgets import QApplication
+        from solo_helper.main import SoloWindow
+        app = QApplication.instance() or QApplication([])
+        orig_game_dir = config.GAME_DIR
+        window = SoloWindow()
+        try:
+            with patch('PySide6.QtWidgets.QFileDialog.getExistingDirectory', return_value=''):
+                window.select_game_dir()
+            self.assertEqual(config.GAME_DIR, orig_game_dir)
+        finally:
+            window.close()
+
+    def test_select_game_dir_invalid_rejected(self):
+        import os
+        os.environ.setdefault('QT_QPA_PLATFORM','offscreen')
+        from PySide6.QtWidgets import QApplication
+        from solo_helper.main import SoloWindow
+        app = QApplication.instance() or QApplication([])
+        orig_game_dir = config.GAME_DIR
+        window = SoloWindow()
+        try:
+            invalid_dir = self.root / 'invalid_game_dir'
+            invalid_dir.mkdir()
+            with patch('PySide6.QtWidgets.QFileDialog.getExistingDirectory', return_value=str(invalid_dir)):
+                window.select_game_dir()
+            self.assertEqual(config.GAME_DIR, orig_game_dir)
+            self.assertIn('未找到 theHunterCotW_F.exe', window.activity.text())
+        finally:
+            window.close()
+
+    def test_select_game_dir_valid_updates_and_persists(self):
+        import os
+        os.environ.setdefault('QT_QPA_PLATFORM','offscreen')
+        from PySide6.QtWidgets import QApplication
+        from solo_helper.main import SoloWindow
+        app = QApplication.instance() or QApplication([])
+        window = SoloWindow()
+        try:
+            valid_dir = self.root / 'custom_valid_game'
+            valid_dir.mkdir()
+            (valid_dir / 'theHunterCotW_F.exe').write_bytes(b'FAKE_COTW_EXE')
+            with patch('PySide6.QtWidgets.QFileDialog.getExistingDirectory', return_value=str(valid_dir)):
+                window.select_game_dir()
+            self.assertEqual(config.GAME_DIR, valid_dir.resolve())
+            self.assertEqual(config.GAME_EXE, (valid_dir / 'theHunterCotW_F.exe').resolve())
+            self.assertIn('已指定游戏目录', window.activity.text())
+            saved = json.loads(config.SETTINGS_FILE.read_text(encoding='utf-8'))
+            self.assertEqual(saved['game_dir'], str(valid_dir.resolve()))
+        finally:
+            window.close()
+
+    def test_path_finder_prioritizes_exe_settings_over_cwd(self):
+        from services.path_finder import detect_steam_cotw_dir
+        exe_dir = self.root / 'tool_dist'
+        exe_dir.mkdir()
+        (exe_dir / 'solo_helper').mkdir()
+        cwd_dir = self.root / 'cwd_dir'
+        cwd_dir.mkdir()
+        game_a = self.root / 'game_canonical'
+        game_a.mkdir()
+        (game_a / 'theHunterCotW_F.exe').write_bytes(b'EXE_A')
+        game_b = self.root / 'game_cwd'
+        game_b.mkdir()
+        (game_b / 'theHunterCotW_F.exe').write_bytes(b'EXE_B')
+
+        (exe_dir / 'solo_helper' / 'settings.json').write_text(json.dumps({'game_dir': str(game_a)}), encoding='utf-8')
+        (cwd_dir / 'settings.json').write_text(json.dumps({'game_dir': str(game_b)}), encoding='utf-8')
+
+        prev_cwd = Path.cwd()
+        try:
+            import os
+            os.chdir(cwd_dir)
+            with patch.object(sys, 'frozen', True, create=True), patch.object(sys, 'executable', str(exe_dir / 'COTW_SoloHelper.exe')):
+                found = detect_steam_cotw_dir()
+            self.assertEqual(found, game_a.resolve())
+            self.assertNotEqual(found, game_b.resolve())
+        finally:
+            os.chdir(prev_cwd)

@@ -5,7 +5,92 @@ from pathlib import Path
 
 
 def detect_steam_cotw_dir() -> Path:
-    """自动通过 Steam 注册表与库清单探测 theHunterCotW 真实安装路径。"""
+    """自动通过运行中进程、Steam 注册表/库清单及常见目录探测 theHunterCotW 真实安装路径。"""
+    # 0. 优先检测规范持久化位置的自定义游戏路径（无论以何种工作目录启动均优先命中）
+    try:
+        import sys, json
+        # 规范配置位置（Canonical persistent locations）具有最高优先级
+        candidates = []
+        if getattr(sys, 'frozen', False):
+            exe_parent = Path(sys.executable).resolve().parent
+            candidates.extend([
+                exe_parent / "solo_helper" / "settings.json",
+                exe_parent / "settings.json",
+            ])
+        else:
+            proj_root = Path(__file__).resolve().parent.parent
+            candidates.extend([
+                proj_root / "solo_helper" / "settings.json",
+                proj_root / "settings.json",
+            ])
+
+        appdata = Path.home() / 'AppData' / 'Local' / 'COTW_Toolkit'
+        candidates.extend([
+            appdata / 'solo_helper' / 'settings.json',
+            appdata / 'settings.json',
+        ])
+
+        # 兼容旧版本或当前工作目录（CWD / Legacy locations）排在规范位置之后
+        candidates.extend([
+            Path("solo_helper") / "settings.json",
+            Path("settings.json"),
+        ])
+
+        seen = set()
+        for s_path in candidates:
+            try:
+                resolved_s = s_path.resolve()
+            except Exception:
+                continue
+            if resolved_s in seen:
+                continue
+            seen.add(resolved_s)
+
+            try:
+                if resolved_s.is_file():
+                    cfg = json.loads(resolved_s.read_text(encoding="utf-8"))
+                    custom = cfg.get("game_dir")
+                    if custom:
+                        custom_path = Path(custom).resolve()
+                        if (custom_path / "theHunterCotW_F.exe").is_file():
+                            return custom_path
+            except Exception:
+                # 单个候选文件解析失败（损坏 JSON），继续检查下一个候选，不中断流程
+                continue
+    except Exception:
+        pass
+
+    # 1. 检测当前是否正在运行游戏，若是则直接返回其真实所在目录
+    try:
+        import ctypes
+        from memory.process_reader import ProcessReader, PROCESSENTRY32W, MODULEENTRY32W
+        mem = ProcessReader()
+        snap = mem._snapshot(2)
+        try:
+            entry = PROCESSENTRY32W()
+            entry.dwSize = ctypes.sizeof(entry)
+            found = mem._enumeration_call(mem.api.Process32FirstW, snap, entry, 'p_first')
+            while found:
+                if entry.szExeFile.casefold() == "thehuntercotw_f.exe":
+                    snap_m = mem._snapshot(0x18, entry.th32ProcessID)
+                    try:
+                        m = MODULEENTRY32W()
+                        m.dwSize = ctypes.sizeof(m)
+                        f_m = mem._enumeration_call(mem.api.Module32FirstW, snap_m, m, 'm_first')
+                        while f_m:
+                            if m.szModule.casefold() == "thehuntercotw_f.exe":
+                                p = Path(m.szExePath).resolve().parent
+                                if (p / "theHunterCotW_F.exe").exists():
+                                    return p
+                            f_m = mem._enumeration_call(mem.api.Module32NextW, snap_m, m, 'm_next')
+                    finally:
+                        mem.api.CloseHandle(snap_m)
+                found = mem._enumeration_call(mem.api.Process32NextW, snap, entry, 'p_next')
+        finally:
+            mem.api.CloseHandle(snap)
+    except Exception:
+        pass
+
     try:
         import winreg
         with winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Valve\Steam") as key:
@@ -26,10 +111,19 @@ def detect_steam_cotw_dir() -> Path:
     except Exception:
         pass
 
-    # 3. 常见盘符后备遍历
+    # 3. 常见盘符与Epic/通用路径后备遍历
     for drive in ("C", "D", "E", "F", "G", "H"):
-        for prefix in ("Steam", "SteamLibrary", "Program Files (x86)/Steam", "Games/Steam"):
-            cand = Path(f"{drive}:/{prefix}/steamapps/common/theHunterCotW")
+        for prefix in (
+            "Steam/steamapps/common/theHunterCotW",
+            "SteamLibrary/steamapps/common/theHunterCotW",
+            "Program Files (x86)/Steam/steamapps/common/theHunterCotW",
+            "Games/Steam/steamapps/common/theHunterCotW",
+            "Program Files/Epic Games/theHunterCallOfTheWild",
+            "Epic Games/theHunterCallOfTheWild",
+            "Games/theHunterCotW",
+            "Games/theHunter Call of the Wild",
+        ):
+            cand = Path(f"{drive}:/{prefix}")
             if (cand / "theHunterCotW_F.exe").exists():
                 return cand
 

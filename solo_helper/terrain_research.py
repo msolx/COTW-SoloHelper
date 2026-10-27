@@ -37,7 +37,7 @@ def tile_index(x,z,transform):
 
 
 def read_terrain_context(memory,current,target):
-    if memory.sha256 != config.EXPECTED_SHA256:
+    if not config.is_compatible_build(memory.sha256):
         raise ReadError('地形研究仅允许当前已核对EXE哈希')
     # 97D940地图高度查询：优先2CA3F0碰撞查询，失败使用2CA270粗表+12。
     terrain = pointer_at(memory,memory.base+0x27c23e0)

@@ -9,7 +9,7 @@ from solo_helper.player_research import pointer_at
 
 def read_physics_position(memory, obj):
     # 来源：6A47E0 -> 24F010 -> FF2FC0。这些是离线指令依据，绝不调用它们。
-    if memory.sha256 != config.EXPECTED_SHA256:
+    if not config.is_compatible_build(memory.sha256):
         raise ReadError('物理研究仅允许已核对哈希')
     component = pointer_at(memory, obj + 0x1ac8)
     controller = pointer_at(memory, component + 0xc0)

@@ -59,7 +59,7 @@ def array_descriptor(memory,address,stride,limit,guards):
 
 
 def inspect_primitive(memory,shape,guards):
-    if memory.sha256!=config.EXPECTED_SHA256:
+    if not config.is_compatible_build(memory.sha256):
         raise ReadError('Sdf网格研究构建不匹配')
     # 2F4E77..2F4E9E：shape+30为共享对象，首指针为几何资源，+38为primitive ID。
     shared=pointer_at(memory,shape+0x30)

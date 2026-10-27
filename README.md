@@ -8,11 +8,11 @@ A standalone Windows **single-player** helper for *theHunter: Call of the Wild*:
 
 ## Compatibility
 
-- Windows 10/11 x64, Steam, **single-player only**.
+- Windows 10/11 x64, **single-player only**. Includes custom installation-directory selection under Maintenance; cross-store/version behavior remains experimental unless individually validated.
 - Steam game build **25131233**, executable SHA256:
   `89dbab025114090c91a63ae7f0533ee84eee3c48f4b8543224b359c31b794c22`.
 - Build/development: Python **3.12 x64**, PySide6-Essentials **6.8.3**, PyInstaller **6.22.3**.
-- A game update may invalidate offsets, code checks and resource hashes. Do not force the compatibility checks to pass.
+- v1.1.0 recognizes a second candidate executable hash, `33c8306e52c5541a5b87e4af576f4149f3da0c23b36775372ec6c41adbab73ca` (build 26051119). Packaged compatibility mode permits other hashes to attempt existing layouts; source-mode guards can be stricter. Pointer/type/instruction/resource checks remain, and success is not guaranteed. Recognition is not proof that all runtime writes or static resources are validated on every version. Do not bypass access denial or force invalid structures to pass.
 
 ## Features and actual limits
 

@@ -130,7 +130,7 @@ def _tile_mesh(memory,info,world,bodies,capacity,origin,guards):
 
 
 def read_mesh_evidence(memory,current,waypoint,terrain):
-    if memory.sha256!=config.EXPECTED_SHA256:
+    if not config.is_compatible_build(memory.sha256):
         raise ReadError('基础网格构建未验证')
     manager=pointer_at(memory,memory.base+0x27a8320)
     world=pointer_at(memory,manager+0x30)

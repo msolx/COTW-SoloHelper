@@ -1,0 +1,52 @@
+{
+  "mode": "field_test",
+  "build": "Steam 26051119 / Layton Lake / 实机现场测试",
+  "sha256": "33c8306e52c5541a5b87e4af576f4149f3da0c23b36775372ec6c41adbab73ca",
+  "candidate": false,
+  "core_verified": true,
+  "verified": true,
+  "identity_validation": {
+    "verified": true,
+    "date": "2026-10-27",
+    "joint_unique_match_observed": true,
+    "notes": "实机现场进程采样：黑尾兔个体(体重2.5947, 评分2.6328, 种子3832185104)三字段唯一精确匹配本地莱顿湖区存档animal_population_1中雌性黑尾兔记录。"
+  },
+  "health_validation": {
+    "verified": true,
+    "date": "2026-10-27",
+    "living_observed": true,
+    "corpse_observed": true,
+    "corpse_removed_observed": true,
+    "notes": "实机现场采样：读取活体jackrabbit与wild turkey共42只实体，当前生命值与最大生命值比例均为100.0%且位于HUD正常区间；尸体生命值归零与消失语义与25131233同构。"
+  },
+  "heading_validation": {
+    "verified": true,
+    "date": "2026-10-27",
+    "north_observed": true,
+    "east_observed": true,
+    "stationary_turn_observed": true,
+    "notes": "实机现场采样：camera_world(camera-48)矩阵[-0.67, 0.00, -0.74; -0.21, 0.96, 0.19; 0.71, 0.28, -0.64]通过正交性(内积0.0001)与单位基(范数0.998)校验。"
+  },
+  "validation": {
+    "date": "2026-10-27",
+    "player_observed": true,
+    "species_observed": true,
+    "position_observed": true,
+    "axes_observed": true,
+    "health_observed": true,
+    "notes": "实机现场采样：玩家位置(9558.1, 1075.3, 10761.1)，成功读取黑尾兔和野生火鸡实体，位置、坐标轴方向与游戏实际完全一致。"
+  },
+  "offsets": {
+    "animals": 40486008,
+    "camera": 41841396,
+    "camera_world": 41841348,
+    "manager_vector": 712,
+    "species": 40,
+    "position": 328,
+    "ragdoll": 192,
+    "hpmax": 376,
+    "hp": 380,
+    "identity_weight": 412,
+    "identity_seed": 432
+  }
+}

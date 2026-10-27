@@ -1,5 +1,6 @@
 """公开Helper入口/设置/版本门禁；不使用原始游戏资源，不连接游戏。"""
 import ast
+import hashlib
 import json
 import os
 os.environ.setdefault('QT_QPA_PLATFORM','offscreen')
@@ -32,12 +33,15 @@ class PublicHelperTests(unittest.TestCase):
             finally:
                 window.close()
 
-    def test_unknown_game_build_is_rejected_offline(self):
+    def test_unknown_build_is_reported_truthfully_and_strict_mode_rejects(self):
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder); exe=path/'game.exe'; exe.write_bytes(b'not the supported game')
             manifest=path/'appmanifest.acf'; manifest.write_text('"buildid" "0"',encoding='utf-8')
             with patch.object(config,'GAME_EXE',exe),patch.object(config,'MANIFEST',manifest):
-                with self.assertRaises(FormatError): builder.verify_build()
+                reported=builder.verify_build()
+                self.assertEqual(reported['sha256'],hashlib.sha256(exe.read_bytes()).hexdigest())
+                self.assertEqual(reported['steam_build'],'0')
+                with self.assertRaises(FormatError): builder.verify_build(strict=True)
 
     def test_spec_uses_helper_entry_and_no_upx(self):
         source=(ROOT/'COTW_SoloHelper.spec').read_text(encoding='utf-8')

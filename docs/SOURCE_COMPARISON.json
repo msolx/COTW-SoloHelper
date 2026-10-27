@@ -1,10 +1,10 @@
 {
-  "source_scope": "solo_helper_runtime",
-  "original_git_history_included": false,
+  "version": "1.1.0",
+  "artifact": "COTW_Toolkit/COTW_SoloHelper.exe",
+  "executable_sha256": "a2e840f6a08446b692b030d684de68c3882841bf85a1324730a8a61bae933034",
   "original_game_assets_included": false,
-  "release_zip_sha256": "9006db4c73fa453332abc43ac93e1de7ee333b1f69fb71e90f531670c42d9e6a",
-  "release_executable_sha256": "0e3017871347e0ca3714a2426ad050f5e23becf36e47c30e6c41f06d37629729",
-  "binary_comparison_method": "Python bytecode, names, flags, exception table and recursive constants; filenames/line numbers ignored",
+  "original_private_git_history_included": false,
+  "binary_comparison_method": "Python bytecode, names, flags, exception table and recursive constants; ignores filenames and line tables",
   "module_comparison": [
     {
       "module": "config",
