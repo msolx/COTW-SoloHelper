@@ -32,14 +32,14 @@ MAX_READ_BYTES = 8192
 MOCK_DISCONNECT_TICK = 18
 MOCK_RECONNECT_TICK = 22
 
-# 用户于本次会话允许现场只读验证。研究探针独立于正式版本门禁，
-# 仅针对这个已观测文件执行一次少量采样，不自动认定偏移已验证。
+# 研究探针独立于正式数据源：仅针对指定构建执行少量只读采样，
+# 采样成功不自动将偏移标记为已验证。
 PROBE_EXPECTED_SHA256 = '89dbab025114090c91a63ae7f0533ee84eee3c48f4b8543224b359c31b794c22'
 PROBE_OFFSETS_FILE = OFFSETS_DIR / 'research_2026_09_16.json'
-PROBE_REPORT = ROOT / 'animal_details_probe.json'  # 本轮详情/尸体核对，保留早期位置证据
+PROBE_REPORT = ROOT / 'animal_details_probe.json'  # 动物详情与尸体对照报告，保留位置证据
 PROBE_SAMPLES = 3
 PROBE_INTERVAL_SECONDS = 1
-PROBE_MAX_ENTITIES = 64  # 现场核对白尾鹿，避免只检查列表前12个而漏掉可见目标
+PROBE_MAX_ENTITIES = 64  # 探针采样上限，避免小样本遗漏可见目标
 PROBE_HISTORY_DIR = ROOT / 'probe_history'
 PROBE_PRINT_DETAILS = False  # 完整样本保存在本地JSON，控制台默认仅输出摘要
 
@@ -55,7 +55,7 @@ STEAM_MANIFEST_PATH = GAME_EXE_PATH.parent.parent / 'appmanifest_518790.acf'
 BUILD_REPORT = ROOT / 'build_inspection.json'
 
 # 移动校准只读摄像机float3。每个步骤需现场配合，不自动批准方向校准。
-CALIBRATION_RESERVE = 'medved'  # 用户现场报告，不代表从内存自动识别
+CALIBRATION_RESERVE = 'medved'  # 手动指定的校准保护区，不代表从内存自动识别
 CALIBRATION_LABEL = 'east_endpoint'
 CALIBRATION_REFERENCE_LABEL = 'north_endpoint'  # 东行起点是刚才的北行终点，不能用累计位移
 CALIBRATION_REPORT = ROOT / 'movement_calibration_medved.json'  # 保留莱顿原始证据

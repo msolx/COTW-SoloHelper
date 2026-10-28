@@ -15,7 +15,7 @@ class PopulationError(ValueError):
 
 
 def stable_read(path):
-    """游戏可能正在保存：同一文件连续两次只读并比对，变化则拒绝本轮。"""
+    """游戏可能正在保存：同一文件连续两次只读并比对，变化则拒绝当前采样。"""
     before = path.stat()
     if not 32 <= before.st_size <= config.POPULATION_MAX_BYTES:
         raise PopulationError('种群文件大小异常')

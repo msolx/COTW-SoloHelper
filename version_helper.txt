@@ -16,11 +16,11 @@ VSVersionInfo(
         StringTable(
           '040904B0',
           [
-            StringStruct('CompanyName', 'COTW Community Tools'),
+            StringStruct('CompanyName', 'msolx'),
             StringStruct('FileDescription', 'theHunter: Call of the Wild Solo Helper & Fast-Travel'),
             StringStruct('FileVersion', '1.1.0.0'),
             StringStruct('InternalName', 'COTW_SoloHelper'),
-            StringStruct('LegalCopyright', 'Open Source Tool'),
+            StringStruct('LegalCopyright', 'Copyright (c) 2026 msolx'),
             StringStruct('OriginalFilename', 'COTW_SoloHelper.exe'),
             StringStruct('ProductName', 'COTW Solo Helper'),
             StringStruct('ProductVersion', '1.1.0.0')

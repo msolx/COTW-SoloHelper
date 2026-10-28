@@ -1,12 +1,12 @@
-# v1.1.0 validation summary
+# v1.1.0 historical source validation
 
-Date: 2026-10-28. Separate source tree: **COTW-SoloHelper**.
+Recorded on 2026-10-28 for source at tag `v1.1.0`, commit `9263691beb8ed730ee87104433f754bf7ac1c2a4`.
 
-- Tests executed: 102; passed: 98; skipped: 4; failures/errors: 0.
-- No game process access: application configuration was initialized against a nonexistent test path; path-finder behavior tests then used the real implementation with temporary fake-installation fixtures.
-- The four skipped tests require original local game assets, which are deliberately not published. A skip is not live-game verification.
-- The supplied spec built successfully using Python 3.12.3 x64, PySide6-Essentials 6.8.3 and PyInstaller 6.22.3 (hooks 2026.9), without running the output EXE.
-- Actual supplied EXE application-module comparison: 31 matching, zero mismatches. Exact artifact identity is in SOURCE_COMPARISON.json.
-- Tests/build success are not antivirus clearance, cross-store live validation or fresh-machine acceptance. No telemetry/upload of game memory is implemented.
+- Source suite: 102 tests executed, 98 passed, 4 skipped, zero failures/errors. Skips require original local game resources, which are deliberately not published.
+- Configuration was initialized against a nonexistent test game path. The real path finder was then restored for temporary-directory tests. No running-game writes were performed.
+- A separated-source PyInstaller build succeeded with Python 3.12.3 x64, PySide6-Essentials 6.8.3, PyInstaller 6.22.3 and hooks 2026.9. The output was not run for that build check.
+- The originally inspected Toolkit EXE had SHA-256 `a2e840f6a08446b692b030d684de68c3882841bf85a1324730a8a61bae933034`, and its 31 application modules matched that source. This is not the standalone Release EXE.
 
-Build logs remain private because they contain local absolute paths. The public repository contains source, tests, build configuration and licensed review data, not game archives/populations, generated mod resources, personal settings, diagnostic histories, binaries or the original private Git history.
+The actual standalone GitHub Release ZIP was separately rechecked against the release-tag source. Its ZIP/EXE identities and 31-module static comparison are recorded in [SOURCE_PROVENANCE.md](SOURCE_PROVENANCE.md) and [SOURCE_COMPARISON.json](SOURCE_COMPARISON.json).
+
+No GUI or real-game feature acceptance for the standalone Release ZIP is inferred from the source tests, build success or Toolkit comparison. No antivirus clearance is claimed. Private build/test logs are retained locally because they contain machine paths.

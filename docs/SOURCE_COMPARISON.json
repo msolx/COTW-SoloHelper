@@ -1,10 +1,19 @@
 {
   "version": "1.1.0",
-  "artifact": "COTW_Toolkit/COTW_SoloHelper.exe",
-  "executable_sha256": "a2e840f6a08446b692b030d684de68c3882841bf85a1324730a8a61bae933034",
-  "original_game_assets_included": false,
-  "original_private_git_history_included": false,
-  "binary_comparison_method": "Python bytecode, names, flags, exception table and recursive constants; ignores filenames and line tables",
+  "release_url": "https://github.com/msolx/COTW-SoloHelper/releases/tag/v1.1.0",
+  "artifact": "COTW_SoloHelper/COTW_SoloHelper.exe",
+  "release_asset": "COTW_SoloHelper_v1.1.0.zip",
+  "release_zip_sha256": "a7d8d92ffdd2f592ddab815bfbecb7e49ee6d91cbe245ba50daf5b97048d466b",
+  "release_zip_bytes": 37482480,
+  "executable_sha256": "0f3c1a9326f1a82d15e1c8545d00020cf1c27ff23b21592d8710ab6ed3b4f8d8",
+  "source_tag": "v1.1.0",
+  "source_commit": "9263691beb8ed730ee87104433f754bf7ac1c2a4",
+  "source_url": "https://github.com/msolx/COTW-SoloHelper/tree/v1.1.0",
+  "verification_date": "2026-10-28",
+  "github_release_asset_digest_verified": true,
+  "local_release_zip_available": true,
+  "crc_passed": true,
+  "binary_comparison_method": "Bytecode, names, flags, exception table and recursive constants; ignores filenames/line tables",
   "module_comparison": [
     {
       "module": "config",
@@ -161,5 +170,10 @@
       "source": "solo_helper_launcher.py",
       "instructions_and_constants_match": true
     }
-  ]
+  ],
+  "live_game_features_retested": false,
+  "published_exe_executed_during_this_review": false,
+  "release_repacked_or_replaced": false,
+  "original_game_assets_included": false,
+  "distribution_license_file_sha256": "2d94e1cd9ac8dadaf35ecd502f60cc6b71e38112feef1f3e2b93bac519fa17ac"
 }
